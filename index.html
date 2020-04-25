@@ -1,3 +1,200 @@
-<script>
-    window.location.href="./html/index.html";
-</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+    <meta property="og:title" content="zksky的个人网站主页">
+    <meta property="og:url" content="http://www.zksky.top/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="zksky的个人网站主页，一个看似小白、实则真·小白的IT界少年">
+    <meta property="og:image" content="http://www.zksky.top/images/me/me.jpg">
+    <meta property="og:locale" content="zh-CN">
+    <meta property="og:locale:alternate" content="en-US">
+    <meta property="og:site_name" content="zksky的个人网站主页">
+    <meta name="author" content="周宽（zksky、吟游少年）">
+    <meta name="keywords" content="个人主页，个人网站，个人博客,zksky,周宽">
+    <meta name="description" content="zksky的个人网站主页，一个看似小白、实则真·小白的IT界少年">
+    <meta name="generator" content="VS Code">
+    <!-- ios的Bar显示为灰色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="zksky">
+    <meta name="weibo:webpage:create_at" content="2020-04-07 15:00:00">
+    <meta name="weibo:webpage:update_at" content="2020-04-07 15:00:00">
+    <!-- 强制页面在当前窗口中以独立页面显示，防止自己的网页被别人当作一个frame页调用；  默认以chorme风格加载 -->
+    <meta http-equiv="windows-Target" contect="_top">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>zksky的个人主页</title>
+
+    <link rel="shortcut icon" href="images/icon/favicon0.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/page2-3.css">
+    <script src="js/indexToM.js"></script>
+</head>
+
+<body id="page-top">
+    <header id="myInfo">
+        <div class="info-button">
+            <a href="javascript:showInfo();">
+                <img id="info-button" src="images/icon/right.png" alt="icon" class="info-box-icon"
+                    style="transform: rotate(0deg);">
+            </a>
+        </div>
+        <div class="info-header">
+            <img src="images/me/me.jpg" alt="" class="mePic" />
+            <h4 align="center" class="myName">Zhou Kuan</h4>
+            <ul class="mySocial">
+                <li>
+                    <a href="tencent://message/?uin=553392040&amp;Site=http://vps.shuidazhe.com&amp;Menu=yes" id="QQ">
+                        <img src="images/icon/QQ.png" data-toggle="tooltip" data-placement="bottom" title=""
+                            data-original-title="QQ" alt="QQ">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://weibo.com/u/6030743704" target="_blank">
+                        <img src="images/icon/weibo.png" data-toggle="tooltip" data-placement="bottom" title=""
+                            data-original-title="微博" alt="微博">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/zhoukuansky" target="_blank">
+                        <img src="images/icon/github.png" data-toggle="tooltip" data-placement="bottom" title=""
+                            data-original-title="github" alt="github">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://gitee.com/zhoukuansky" target="_blank">
+                        <img src="images/icon/gitee.png" data-toggle="tooltip" data-placement="bottom" title=""
+                            data-original-title="gitee" alt="gitee">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/%E5%AE%BD-%E5%91%A8-9199191a5/?trk=chatin_wnc_redirect_pubprofile&ctx=cnpartner&profileId=ACoAACf9xEMB3cdNXo2dJXMCHUiFyw2tnSySrVg&trk=zephyr_profile_qr_wnc"
+                        target="_blank">
+                        <img src="images/icon/lingying.png" data-toggle="tooltip" data-placement="bottom" title=""
+                            data-original-title="领英" alt="领英">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="info-body">
+            <ul class="my-info-list">
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>昵称：</strong>zksky or zhoukuansky
+                    </span>
+                </li>
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>地址：</strong>中国 · 四川 · 自贡
+                    </span>
+                </li>
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>院校：</strong><a href="http://www.sicau.edu.cn">四川农业大学（本科）</a>
+                    </span>
+                </li>
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>院校：</strong><a href="https://www.hnu.edu.cn" target="_blank">湖南大学（硕士）</a>
+                    </span>
+                </li>
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>博客：</strong><a href="http://blog.zksky.top" target="_blank">http://blog.zksky.top/</a>
+                    </span>
+                </li>
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>CSDN：</strong><a href="https://blog.csdn.net/soul_sky" target="_blank">zksky's CSDN
+                        </a>
+                    </span>
+                </li>
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>邮箱：</strong><a href="mailto:zhoukuansky@163.com">zhoukuansky@163.com</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- <nav class="navbar navbar-b navbar-expand-md fixed-top navbar-trans" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll" href="#page-top">zksky</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+                aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll" href="#service">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll" href="#work">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+
+    <section class="index">
+        <div class="index-content">
+            <div class="index-h1">
+                <h1>Je pense donc je suis</h1>
+            </div>
+            <div class="code">
+                <!-- <span><strong>printf("</strong></span> -->
+                <span><strong class="typedjs"></strong></span>
+                <!-- <span><strong>");</strong></span> -->
+            </div>
+            <div class="chnia">
+                <span>愿你走出半生</span><br>
+                <span>归来仍是少年</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-map">
+        <h1>本站访问图</h1>
+    </section>
+
+    <section></section>
+
+    <footer></footer>
+
+
+    <script src="assets/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/vue/vue.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/typed-js/typed.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

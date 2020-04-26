@@ -112,7 +112,7 @@ function elementInViewport2(el) {
 function printWord() {
     var typed = new Typed('.typedjs', {
         strings: [
-            'Hello Horld',
+            'Hello World',
             'I\'m Zksky',
             '译：我思故我在',
         ],

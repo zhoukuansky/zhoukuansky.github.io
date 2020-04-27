@@ -112,8 +112,8 @@ function elementInViewport2(el) {
 function printWord() {
     var typed = new Typed('.typedjs', {
         strings: [
-            'Hello World',
-            'I\'m Zksky',
+            'Hello World!',
+            'I\'m Zksky!',
             '译：我思故我在',
         ],
         typeSpeed: 150,

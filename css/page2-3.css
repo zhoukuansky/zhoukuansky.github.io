@@ -1,18 +1,16 @@
 .page-map{
-    background:url(../images/bg/index.jpg) no-repeat;
+    background:url(../images/bg/gun.jpg) no-repeat;
     background-position-x: 50%;
     background-position-y: 50%;
     background-attachment:fixed;
     background-size: cover;
-    height: 100%;
+    height: 120%;
 }
-
-
 .go-blog{
     width: 100%;
-    height: 600px;
+    height: 110vh;
     /* background: rgb(218, 220, 226); */
-    background: white;
+    background: #fdfcf8;
     padding-top: 80px;
 }
 .go-blog h1{
@@ -24,6 +22,7 @@
 }
 .go-blog-word{
     width: 900px;
+    padding-left: 10px;
     margin: 0 auto;
     font-size: 1.25rem;
 }

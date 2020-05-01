@@ -6,6 +6,7 @@ var hasAnimation = {    //  动画是否需要执行，false不需要，true需�
 }
 
 $(function () {
+
     printWord();
 
     var a = document.getElementById("QQ");
@@ -18,35 +19,35 @@ $(function () {
     /**
     *  监听滚动器
     */
-    $(window).scroll(function (e) {
-        if (checkShow($(".page-four-card")) && hasAnimation.card) {
-            $(".page-four-card").css({
-                "opacity": 1,
-                "top": "200px"
-            });
-            hasAnimation.card = false
-        }
-        if (checkShow($(".ability-list-container")) && hasAnimation.ability) {
-            $(".ability-list-container").css({
-                "opacity": 1
-            })
-            hasAnimation.ability = false
-        }
-        if (checkShow($(".work-container")) && hasAnimation.work) {
-            $(".work-show-up,.work-show-down").css({
-                "opacity": 1,
-                "bottom": "0"
-            })
-            hasAnimation.work = false
-        }
-        if (checkShow($(".git-link-box")) && hasAnimation.git) {
-            $(".git-link-box").css({
-                "opacity": 1,
-                "right": "180px"
-            })
-            hasAnimation.git = false
-        }
-    })
+    // $(window).scroll(function (e) {
+    //     if (checkShow($(".page-four-card")) && hasAnimation.card) {
+    //         $(".page-four-card").css({
+    //             "opacity": 1,
+    //             "top": "200px"
+    //         });
+    //         hasAnimation.card = false
+    //     }
+    //     if (checkShow($(".ability-list-container")) && hasAnimation.ability) {
+    //         $(".ability-list-container").css({
+    //             "opacity": 1
+    //         })
+    //         hasAnimation.ability = false
+    //     }
+    //     if (checkShow($(".work-container")) && hasAnimation.work) {
+    //         $(".work-show-up,.work-show-down").css({
+    //             "opacity": 1,
+    //             "bottom": "0"
+    //         })
+    //         hasAnimation.work = false
+    //     }
+    //     if (checkShow($(".git-link-box")) && hasAnimation.git) {
+    //         $(".git-link-box").css({
+    //             "opacity": 1,
+    //             "right": "180px"
+    //         })
+    //         hasAnimation.git = false
+    //     }
+    // })
 })
 
 /**

@@ -37,7 +37,7 @@
 </head>
 
 <body id="page-top">
-    <header id="myInfo">
+    <header id="myInfo" class="myInfo">
         <div class="info-button">
             <a href="javascript:showInfo();">
                 <img id="info-button" src="images/icon/right.png" alt="icon" class="info-box-icon"
@@ -45,7 +45,9 @@
             </a>
         </div>
         <div class="info-header">
+        <div class="pic-box">
             <img src="images/me/me.jpg" alt="" class="mePic" />
+        </div>
             <h4 align="center" class="myName">Zhou Kuan</h4>
             <ul class="mySocial">
                 <li>
@@ -128,6 +130,11 @@
                 </li>
             </ul>
         </div>
+        <div class="myBlog">
+            <center><a href="http://blog.zksky.top" target="_blank">
+                    Blog
+                </a></center>
+        </div>
     </header>
 
     <!-- <nav class="navbar navbar-b navbar-expand-md fixed-top navbar-trans" id="mainNav">
@@ -165,27 +172,46 @@
     </nav> -->
 
     <section class="index">
-        <div class="index-content">
-            <div class="index-h1">
-                <h1>Je pense donc je suis</h1>
-            </div>
-            <div class="code">
-                <!-- <span><strong>printf("</strong></span> -->
-                <span><strong class="typedjs"></strong></span>
-                <!-- <span><strong>");</strong></span> -->
-            </div>
-            <div class="chnia">
-                <span>愿你走出半生</span><br>
-                <span>归来仍是少年</span>
+        <div class="index-box">
+            <div class="index-content">
+                <div class="index-h1">
+                    <h1>Je pense donc je suis</h1>
+                </div>
+                <div class="code">
+                    <!-- <span><strong>printf("</strong></span> -->
+                    <span><strong class="typedjs"></strong></span>
+                    <!-- <span><strong>");</strong></span> -->
+                </div>
+                <div class="go-mybolg">右上角前往我的博客网站</div>
+                <div class="chnia">
+                    <span>愿你走出半生</span><br>
+                    <span>归来仍是少年</span>
+                </div>
             </div>
         </div>
+
     </section>
 
     <section class="page-map">
-        <div class="go-blog">
-            <h1>来访者</h1>
-            <div class="go-blog-word">
-                <span>欢迎你的访问，你是本站第0位访客。</span>
+        <div class="visitor">
+            <div class="visitor-head">
+                <h1>来访者</h1>
+                <div class="visitor-word">
+                    <span>欢迎未知地址的朋友访问，你是本站第0位访客</span><br>
+                    <span>备注：30分钟内重复访问不计入次数</span>
+                </div>
+            </div>
+
+            <div class="visitor-body">
+                <div class="container-fluid">
+                    <div class="row row justify-content-center">
+                        <div class="col-md-auto  col-sm-auto col-auto">
+                            <div class="globe-container">
+                                <canvas id="globe"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -199,7 +225,12 @@
     <script src="assets/vue/vue.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/typed-js/typed.min.js"></script>
+    <script type='text/javascript' src='assets/palnetary/d3.v3.min.js'></script>
+    <script type='text/javascript' src='assets/palnetary/topojson.v1.min.js'></script>
+    <script type='text/javascript' src='assets/palnetary/planetaryjs.min.js'></script>
     <script src="js/index.js"></script>
+    <script src="js/globe.js"></script>
+
 </body>
 
 </html>

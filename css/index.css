@@ -21,7 +21,7 @@ html, body {
     overflow: hidden;
 }
 
-.index-content{
+.index-box{
     height: 100%;
     width: 100% !important;
     background:url(../images/bg/index.jpg) no-repeat;
@@ -29,8 +29,8 @@ html, body {
     background-position-y: 50%;
     background-size: cover;
     
-    animation: coverZoom linear 15s infinite;
-    -webkit-animation: coverZoom linear 15s infinite;
+    animation: coverZoom linear 20s infinite;
+    -webkit-animation: coverZoom linear 20s infinite;
     animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
 }
@@ -41,14 +41,14 @@ html, body {
     transform: scale(1);
 }
 50% {
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 100% {
     transform: scale(1);
 }
 }
 
-#myInfo{
+.myInfo{
     height: 100%;
     width: 400px;
     position: fixed;
@@ -120,13 +120,16 @@ html, body {
     background: #eef2f5;
     overflow-y: auto;
 }
+.pic-box{
+    display: flex;
+    justify-content: center;
+}
 .mePic{
     margin-top: 30px;
     position: relative;
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    left: 32%;
     top: 50%;
 }
 .myName{
@@ -216,4 +219,18 @@ html, body {
 }
 .info-list-content a{
     color: rgb(81, 136, 238);
+}
+
+.myBlog{
+    position: fixed;
+    top: 10px;
+    right: -30px;
+    width: 100px;
+    height: 23px;
+    background: #eef2f5;
+    transform: rotate(45deg);
+}
+.myBlog a{
+    color: rgb(194, 194, 194);
+    text-decoration:none;
 }

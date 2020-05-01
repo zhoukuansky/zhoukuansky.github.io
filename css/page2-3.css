@@ -1,28 +1,40 @@
 .page-map{
-    background:url(../images/bg/gun.jpg) no-repeat;
+    background:url(../images/bg/index.jpg) no-repeat;
     background-position-x: 50%;
     background-position-y: 50%;
     background-attachment:fixed;
     background-size: cover;
-    height: 120%;
+    height: 125vh;
 }
-.go-blog{
+.visitor{
     width: 100%;
     height: 110vh;
-    /* background: rgb(218, 220, 226); */
-    background: #fdfcf8;
-    padding-top: 80px;
+    /* background: #fdfcf8; */
+    background: white;
+    padding-top: 60px;
 }
-.go-blog h1{
+.visitor-head{
+    height: 25%;
+}
+.visitor-body{
+    height: 75%;
+    background: white;
+}
+.visitor h1{
     color: black;
     font-size: 4rem;
     text-align: center;
     font-size: 2.5rem;
     font-weight: 500;
 }
-.go-blog-word{
-    width: 900px;
-    padding-left: 10px;
-    margin: 0 auto;
+.visitor-word{
+    text-align: center;
+    margin: 20px auto;
     font-size: 1.25rem;
+}
+.globe-container{
+    margin: 0px auto;
+    padding: 0px;
+    filter: blur(0px);
+    color: #df5f5f;
 }

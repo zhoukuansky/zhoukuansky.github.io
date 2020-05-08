@@ -3,12 +3,7 @@ $(function(){
     globe.init();
 })
 
-
-const switchLanguage = () => {
-	const current = document.getElementsByTagName("html")[0].getAttribute("lang").substr(0, 2)
-	document.cookie = "lang=" + (current == "en" ? "zh" : "en")
-	location.reload()
-}
+var China=[250, -20, 0];
 
 class Globe {
 	constructor() {
@@ -21,9 +16,13 @@ class Globe {
 		this.planet.loadPlugin(
 			planetaryjs.plugins.earth({
 				topojson: { file: "data/world-110m-withlakes.json" },
-				oceans: { fill: "#dddee0" },
-                land: { fill: "#f7f7f7" },
-                borders:  { stroke: 'rgb(194, 194, 194)' }
+				// oceans: { fill: "#dddee0" },
+                // land: { fill: "#f7f7f7" },
+				// borders:  { stroke: 'rgb(194, 194, 194)' }
+				
+				oceans:   { fill:   '#000040' },
+				land:     { fill:   '#1b72b0' },
+				borders:  { stroke: '#000055' }
 			})
 		)
 		this.planet.loadPlugin(planetaryjs.plugins.drag({
@@ -42,7 +41,7 @@ class Globe {
 		this.locations()
 		this.scale()
 		this.planet.draw(this.canvas)
-		this.planet.projection.rotate([0, -25, 0]) // Focus on the northern hemisphere
+		this.planet.projection.rotate(China) // Focus on the northern hemisphere
 		window.addEventListener("resize", () => this.scale())
 	}
 	scale() {
@@ -56,8 +55,8 @@ class Globe {
 		this.diameter = diam
 		var vpx=-0.4*diam+200;
 		$(".visitor-body").css("padding-top", vpx+"px");
-		console.log(vpx+"px")
-		console.log()
+		// console.log(vpx+"px")
+		// console.log()
 	}
 // 300x+y=80
 // 500x+y=0
@@ -90,6 +89,9 @@ class Globe {
 	
 					planet.projection.rotate(rotation)
 					lastTick = now
+					console.log(rotation[0])
+					console.log(now)
+					console.log(delta)
 				}
 			})
 		}

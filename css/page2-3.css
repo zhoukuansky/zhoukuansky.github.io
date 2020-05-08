@@ -8,26 +8,32 @@
 }
 .visitor{
     width: 100%;
-    height: 110vh;
+    height: 115vh;
     /* background: #fdfcf8; */
-    background: white;
+    background: rgb(13, 78, 131);
+    background:url(../images/bg/sky.jpg) no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    /* background-attachment:fixed; */
+    background-size: cover;
     padding-top: 60px;
 }
 .visitor-head{
     height: 25%;
+    padding: 0 10px;
 }
 .visitor-body{
     height: 75%;
-    background: white;
 }
 .visitor h1{
-    color: black;
+    color: white;
     font-size: 4rem;
     text-align: center;
     font-size: 2.5rem;
     font-weight: 500;
 }
 .visitor-word{
+    color: white;
     text-align: center;
     margin: 20px auto;
     font-size: 1.25rem;
@@ -37,4 +43,5 @@
     padding: 0px;
     filter: blur(0px);
     color: #df5f5f;
+    touch-action: none;
 }

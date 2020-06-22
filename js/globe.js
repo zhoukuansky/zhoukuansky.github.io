@@ -4,9 +4,6 @@ var China = [250, -20, 0];
 //获取dom元素
 var canvas = document.getElementById("globe");
 
-$(function () {
-    initGlobe();
-})
 
 function initGlobe() {
     //加载我们的自定义“autorotate”插件，配置地球旋转角度

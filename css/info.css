@@ -1,4 +1,4 @@
-.myInfo{
+  .myInfo{
     height: 100%;
     width: 400px;
     position: fixed;
@@ -10,7 +10,6 @@
     transition: all ease 0.3s;
 }
 
-    
 
 .info-button {
     display: block; 

@@ -1,0 +1,37 @@
+.my-setting{
+    padding: 0 30px;
+}
+.skill{
+    width: 100%;
+    color: white;
+    height: auto;
+    background:url(../images/bg/bg-slide.jpg) no-repeat;
+    background-position-x: 70%;
+    background-position-y: 60%;
+    background-attachment:fixed;
+    background-size: cover;
+}
+.skill-bg{
+    background-color:rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+}
+.skill-title-word{
+    margin-bottom: 10px;
+}
+.skill-list {
+    list-style: none;
+}
+.skill-title {
+    margin: 5px 0;
+}
+@media (max-width: 768px) { 
+    .xiaoshi{
+        display: none;
+    }
+}
+.my-word{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px 10px;
+    margin-top: 50px;
+    color: whitesmoke;
+}

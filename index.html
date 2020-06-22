@@ -35,10 +35,13 @@
     <link rel="stylesheet" href="css/visitor.css">
     <link rel="stylesheet" href="css/work.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script src="js/indexToM.js"></script>
 </head>
 
-<body id=" m065093-top">
+<body id="">
     <header id="myInfo" class="myInfo">
         <div class="info-button">
             <a href="javascript:showInfo();">
@@ -151,9 +154,10 @@
                     <!-- <span><strong>");</strong></span> -->
                 </div>
                 <div class="go-mybolg">右上角前往我的博客网站</div>
-                <div class="chnia">
+                <div class="chnia" id="showMyLifeTime">
                     <span>愿你走出半生</span><br>
-                    <span>归来仍是少年</span>
+                    <span>归来仍是少年</span><br>
+                    <span>{{time}}</span>
                 </div>
             </div>
         </div>
@@ -193,9 +197,11 @@
                     <div class="mywork-box">
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/IOT.png" alt="">
-                            <a href="http://iot.zksky.top/IOTData/swagger-ui.html#" target="_black" class="work-link">index</a>
+                            <a href="http://my.zksky.top/IOTData/swagger-ui.html#" target="_black"
+                                class="work-link">index</a>
                             <a href="https://gitee.com/zhoukuansky/IOTData" target="_black" class="work-link">gitee</a>
-                            <a href="https://github.com/zhoukuansky/IOTData" target="_black" class="work-link" target="_black">github</a>
+                            <a href="https://github.com/zhoukuansky/IOTData" target="_black" class="work-link"
+                                target="_black">github</a>
                         </div>
                         <div class="work-word">
                             IOT数据存储平台
@@ -207,8 +213,10 @@
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/river.png" alt="">
                             <a href="http://111.230.226.20/pages/index.html" target="_black" class="work-link">index</a>
-                            <a href="https://gitee.com/zhoukuansky/River_length_system" target="_black" class="work-link">gitee</a>
-                            <a href="https://github.com/zhoukuansky/River_length_system" target="_black" class="work-link">github</a>
+                            <a href="https://gitee.com/zhoukuansky/River_length_system" target="_black"
+                                class="work-link">gitee</a>
+                            <a href="https://github.com/zhoukuansky/River_length_system" target="_black"
+                                class="work-link">github</a>
                         </div>
                         <div class="work-word">
                             成都河长制平台
@@ -220,8 +228,10 @@
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/blog.png" alt="">
                             <a href="http://blog.zksky.top/" target="_black" class="work-link">index</a>
-                            <a href="https://gitee.com/zhoukuansky/zkBlogCode" target="_black" class="work-link">gitee</a>
-                            <a href="https://github.com/zhoukuansky/zkBlogCode" target="_black" class="work-link">github</a>
+                            <a href="https://gitee.com/zhoukuansky/zkBlogCode" target="_black"
+                                class="work-link">gitee</a>
+                            <a href="https://github.com/zhoukuansky/zkBlogCode" target="_black"
+                                class="work-link">github</a>
                         </div>
                         <div class="work-word">
                             我的博客平台
@@ -234,9 +244,11 @@
                     <div class="mywork-box">
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/recycle.png" alt="">
-                            <a href="http://my.zksky.top/recycle/swagger-ui.html#" target="_black" class="work-link">index</a>
+                            <a href="http://my.zksky.top/recycle/swagger-ui.html#" target="_black"
+                                class="work-link">index</a>
                             <a href="https://gitee.com/zhoukuansky/recycle" target="_black" class="work-link">gitee</a>
-                            <a href="https://github.com/zhoukuansky/recycle" target="_black" class="work-link">github</a>
+                            <a href="https://github.com/zhoukuansky/recycle" target="_black"
+                                class="work-link">github</a>
                         </div>
                         <div class="work-word">
                             线上回收站平台
@@ -249,9 +261,10 @@
                             <img class="work-logo" src="images/workIcon/plant.png" alt="">
                             <a href="http://my.zksky.top/hydroponics/" target="_black" class="work-link">index</a>
                             <a href="https://gitee.com/zhoukuansky/plantPro" target="_black" class="work-link">gitee</a>
-                            <a href="https://github.com/zhoukuansky/plantPro" target="_black" class="work-link">github</a>
+                            <a href="https://github.com/zhoukuansky/plantPro" target="_black"
+                                class="work-link">github</a>
                         </div>
-                        <div class="work-word chaffle">
+                        <div class="work-word">
                             植物工厂Web
                         </div>
                     </div>
@@ -263,13 +276,146 @@
     <section class="project"></section>
 
     <section class="skill">
-        <div></div>
+        <div class="skill-bg">
+            <div class="container-fluid my-setting">
+                <div class="row justify-content-center">
+                    <div class="col-md-3 xiaoshi">
+                        <div class="rounded my-word">
+                            <div class="row justify-content-center">
+                                <div class="col-md-auto">
+                                    <p>愿</p>
+                                    <p>此生像一只蜡烛，</p>
+                                    <p>从头燃到尾，</p>
+                                    <p>始终光明。</p>
+                                    <p>——寄语</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="skill-title-word">
+                            What can I do？
+                        </h1>
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-title">
+                                    <strong>网页设计</strong>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+                                        role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 55%">
+                                        55%
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-title">
+                                    <strong>java及数据库</strong>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                        role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 70%">
+                                        70%
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-title">
+                                    <strong>程序设计</strong>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+                                        role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 60%">
+                                        60%
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-title">
+                                    <strong>python</strong>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                        role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 35%">
+                                        35%
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-title">
+                                    <strong>摄影</strong>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+                                        role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 40%">
+                                        40%
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="contact"></section>
+    <section class="contact">
+        <div class="container-fluid my-setting">
+            <div class="row justify-content-center">
+                <div class="col-md-4 contact-head">
+                    <h1>Contact Me</h1>
+                    <a href="javascript:showInfo();" class="send-email">Send Email to me</a>
+                </div>
+                <div class="col-md-6">
+                    <p class="contact-title">
+                        联系作者
+                    </p>
+                    <div class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">称呼：</label>
+                            <input name="name" minlength="1" type="text" class="form-control" placeholder="Your Name"
+                                v-model="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">邮箱：</label>
+                            <input type="email" name="email" class="form-control" placeholder="Your Email"
+                                v-model="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">主题：</label>
+                            <input type="text" name="subject" class="form-control" placeholder="Subject"
+                                v-model="subject">
+                        </div>
 
-    <footer>
+                        <div class="form-group">
+                            <label for="contact-message">内容：</label>
+                            <textarea class="form-control" name="content" placeholder="Your Message"
+                                v-model="content"></textarea>
+                        </div>
 
+                        <div class="form-send">
+                            <button class="btn btn-large" v-on:click="send()">发送信息</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="bg-footer">
+            <div class="footer-content">
+                <a href="http://www.beian.miit.gov.cn/">蜀ICP备20010319号</a></br>
+                <span id="showAdultsTime">在风雨中走过 {{time}}</span></br>
+                <span>Copyright © 2020-2030 ZkSky. | All Rights Reserved.</span></br>
+
+            </div>
+        </div>
     </footer>
 
 
@@ -277,11 +423,13 @@
     <script src="assets/vue/vue.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/typed-js/typed.min.js"></script>
+    <script src="assets/validate/jquery.validate.min.js"></script>
     <script type='text/javascript' src='assets/palnetary/d3.v3.min.js'></script>
     <script type='text/javascript' src='assets/palnetary/topojson.v1.min.js'></script>
     <script type='text/javascript' src='assets/palnetary/planetaryjs.min.js'></script>
-    <script src="js/index.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/globe.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 

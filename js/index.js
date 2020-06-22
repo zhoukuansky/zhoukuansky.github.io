@@ -1,12 +1,15 @@
-var hasAnimation = {    //  动画是否需要执行，false不需要，true需要
-    work: true,
-    git: true,
-    ability: true,
-    card: true
-}
+// var hasAnimation = {    //  动画是否需要执行，false不需要，true需要
+//     work: true,
+//     git: true,
+//     ability: true,
+//     card: true
+// }
 
 $(function () {
+    //在globe.js问及暗中定义
+    initGlobe();
 
+    //通过typed-js插件打印文字，在commen.js中定义
     printWord();
 
     var a = document.getElementById("QQ");
@@ -15,39 +18,11 @@ $(function () {
     } else {
         a.href = "tencent://message/?uin=1246886075&Site=http://vps.shuidazhe.com&Menu=yes";
     }
-
-    /**
-    *  监听滚动器
-    */
-    // $(window).scroll(function (e) {
-    //     if (checkShow($(".page-four-card")) && hasAnimation.card) {
-    //         $(".page-four-card").css({
-    //             "opacity": 1,
-    //             "top": "200px"
-    //         });
-    //         hasAnimation.card = false
-    //     }
-    //     if (checkShow($(".ability-list-container")) && hasAnimation.ability) {
-    //         $(".ability-list-container").css({
-    //             "opacity": 1
-    //         })
-    //         hasAnimation.ability = false
-    //     }
-    //     if (checkShow($(".work-container")) && hasAnimation.work) {
-    //         $(".work-show-up,.work-show-down").css({
-    //             "opacity": 1,
-    //             "bottom": "0"
-    //         })
-    //         hasAnimation.work = false
-    //     }
-    //     if (checkShow($(".git-link-box")) && hasAnimation.git) {
-    //         $(".git-link-box").css({
-    //             "opacity": 1,
-    //             "right": "180px"
-    //         })
-    //         hasAnimation.git = false
-    //     }
-    // })
+    //显示本站走过的时间
+    showAdultsTime();
+    //显示本站走过的时间
+    showMyTime();
+    
 })
 
 /**
@@ -66,61 +41,44 @@ function showInfo() {
 
 }
 
-/**
- * 判断dom元素是否出现在视野内
- * @param $Obj jquery元素
- * @returns {boolean}
- */
-function checkShow($Obj) { // 传入jq对象
-    var sTop = $(window).scrollTop();  //即页面向上滚动的距离
-    var wHeight = $(window).height(); // 浏览器自身的高度
-    var offsetTop = $Obj.offset().top;  //目标标签img相对于document顶部的位置
+// /**
+//  * 判断dom元素是否出现在视野内
+//  * @param $Obj jquery元素
+//  * @returns {boolean}
+//  */
+// function checkShow($Obj) { // 传入jq对象
+//     var sTop = $(window).scrollTop();  //即页面向上滚动的距离
+//     var wHeight = $(window).height(); // 浏览器自身的高度
+//     var offsetTop = $Obj.offset().top;  //目标标签img相对于document顶部的位置
 
-    if (offsetTop < (sTop + wHeight) && offsetTop > sTop) { //在2个临界状态之间的就为出现在视野中的
-        return true;
-    }
-    return false;
-}
+//     if (offsetTop < (sTop + wHeight) && offsetTop > sTop) { //在2个临界状态之间的就为出现在视野中的
+//         return true;
+//     }
+//     return false;
+// }
 
-/**
- * 判断dom元素是否出现在视野内
- * @param el dom元素
- * @returns {boolean}
- */
-function elementInViewport2(el) {
-    var top = el.offsetTop;
-    var left = el.offsetLeft;
-    var width = el.offsetWidth;
-    var height = el.offsetHeight;
+// /**
+//  * 判断dom元素是否出现在视野内
+//  * @param el dom元素
+//  * @returns {boolean}
+//  */
+// function elementInViewport2(el) {
+//     var top = el.offsetTop;
+//     var left = el.offsetLeft;
+//     var width = el.offsetWidth;
+//     var height = el.offsetHeight;
 
-    while (el.offsetParent) {
-        el = el.offsetParent;
-        top += el.offsetTop;
-        left += el.offsetLeft;
-    }
+//     while (el.offsetParent) {
+//         el = el.offsetParent;
+//         top += el.offsetTop;
+//         left += el.offsetLeft;
+//     }
 
-    return (
-        top < (window.pageYOffset + window.innerHeight) &&
-        left < (window.pageXOffset + window.innerWidth) &&
-        (top + height) > window.pageYOffset &&
-        (left + width) > window.pageXOffset
-    );
-}
-
-/**
- * 通过typed-js插件打印文字
- */
-function printWord() {
-    var typed = new Typed('.typedjs', {
-        strings: [
-            'Hello World!',
-            'I\'m Zksky!',
-            '译：我思故我在',
-        ],
-        typeSpeed: 150,
-        loop: true,
-        backDelay: 2000,
-        backSpeed: 30
-    });
-}
+//     return (
+//         top < (window.pageYOffset + window.innerHeight) &&
+//         left < (window.pageXOffset + window.innerWidth) &&
+//         (top + height) > window.pageYOffset &&
+//         (left + width) > window.pageXOffset
+//     );
+// }
 

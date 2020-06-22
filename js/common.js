@@ -1,0 +1,121 @@
+var url = "http://114.115.243.22:8080/";
+var startTime=1592323200000;//建站时间
+var myLifeTime=873388800000;//起源时间
+
+var app = new Vue({
+    el: '#contact-form',
+    data: {
+        name: "",
+        email: "",
+        subject: "",
+        content: "",
+    },
+    methods: {
+        /**
+        * 发送信息给我
+        */
+        send: function () {
+            var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$"); //邮箱正则表达式
+            if (app.name == "" || app.email == "" || app.subject == "" || app.content == "") {
+                alert("错误：表单信息均为必填项，表单未填写完整！");
+                return;
+            } else if (!reg.test(app.email)) {
+                app.email = "";
+                alert("错误：请填写合法邮箱！");
+                return;
+            }
+            $.ajax({
+                url: url + "/myMessage",
+                type: "POST",
+                dataType: "json",
+                data: {
+                    name: app.name,
+                    email: app.email,
+                    subject: app.subject,
+                    content: app.content,
+                },
+                ContentType: "application/json",
+                headers: {
+                },
+                success: function (res) {
+                    if (res.status == 0) {
+                        alert("发送信息成功!");
+                    } else {
+                        alert("发送信息失败！");
+                    }
+                }
+            })
+        }
+    }
+})
+
+
+
+/**
+ * 通过typed-js插件打印文字
+ */
+function printWord() {
+    var typed = new Typed('.typedjs', {
+        strings: [
+            'Hello World!',
+            'I\'m Zksky!',
+            '译：我思故我在',
+        ],
+        typeSpeed: 150,
+        loop: true,
+        backDelay: 2000,
+        backSpeed: 30
+    });
+}
+
+var timeVue = new Vue({
+    el: '#showAdultsTime',
+    data: {
+        time: "你好",
+    },
+})
+var lifeVue = new Vue({
+    el: '#showMyLifeTime',
+    data: {
+        time: "你0好",
+    },
+})
+
+/**
+ * 显示本站走过的时间
+ */
+function showAdultsTime() {
+    var nowTime = new Date().getTime(); //获取毫秒数
+    var MS=nowTime-startTime;
+    var allDay=Math.floor(MS/86400000);
+    MS=MS%86400000;
+    var allH=Math.floor(MS/3600000);
+    MS=MS%3600000;
+    var allM=Math.floor(MS/60000);
+    MS=MS%60000;
+    var allS=Math.floor(MS/1000);
+    timeVue.time = allDay+"天" + checkTime(allH)+"时" + checkTime(allM)+"分"+ checkTime(allS)+"秒"; 
+    //定时器
+    setTimeout("showAdultsTime()", 1000); 
+}
+/**
+ * 显示本人走过的时间
+ */
+function showMyTime() {
+    var nowTime = new Date().getTime(); //获取毫秒数
+    var MS=nowTime-myLifeTime;
+    var allDay=Math.floor(MS/86400000);
+    MS=MS%86400000;
+    var allH=Math.floor(MS/3600000);
+    MS=MS%3600000;
+    var allM=Math.floor(MS/60000);
+    MS=MS%60000;
+    var allS=Math.floor(MS/1000);
+    lifeVue.time = allDay+"天" + checkTime(allH)+"时" + checkTime(allM)+"分"+ checkTime(allS)+"秒"; 
+    //定时器
+    setTimeout("showMyTime()", 1000); 
+}
+function checkTime(i) {
+    if (i < 10) { i = "0" + i }
+    return i;
+}

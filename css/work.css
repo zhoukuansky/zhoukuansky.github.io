@@ -1,4 +1,3 @@
-
 .work{
     width: 100%;
     height: auto;
@@ -35,24 +34,31 @@
     box-shadow: 0 1px 4px rgba(37, 37, 29, 0.788);
     display: flex;
     align-items: center;
+    overflow: hidden;
 } 
 .work-link{
     display: none;
     height: 10vh;
     min-height: 70px;
-    width: 80%;
+    width: 50%;
     text-align: center;
-    margin: 0vh 10%;
-    color: black;
+    margin: 0vh 25%;
+    color: rgb(161, 250, 235);
     text-decoration:none;
     line-height: 10vh;
     font-size: 1.3rem;
     border-radius: 3px;
 }
 .work-link:hover{
-    color: rgb(91, 117, 51);
+    width: 100%;
+    margin: 0vh;
+    color: rgb(247, 247, 185);
     text-decoration:none;
-    background-color: rgb(232, 245, 175);
+    background-color: #53571c;
+    /* 线性变化 0.5s */
+    transition: all 0.5s linear;
+    /* 旋转360度 */
+    /* transform: rotate(360deg); */
 }
 .work-logo{
     display: block;
@@ -63,10 +69,11 @@
 }
 .work-head:hover{
     display: block;
-    background:url(../images/bg/border.jpg) no-repeat;
+    background:url(../images/bg/bg-link.jpg)  no-repeat;
     background-position-x: 50%;
     background-position-y: 50%;
     background-size: cover;
+    /* transition: all 0.7s linear; */
 }
 .work-head:hover .work-link{
     display: block;

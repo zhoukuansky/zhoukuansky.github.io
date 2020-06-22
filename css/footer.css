@@ -1,3 +1,34 @@
-footer{
-    min-height:600pxfffffffffffff;
+.footer {
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    background-color: #222222;
+}
+.footer:before {
+    content: "";
+    position: absolute;
+    left: -227px;
+    top: -100px;
+    background: #2f2f2f;
+    width: 2200px;
+    height: 250px;
+    transform: rotate(6deg);
+    border-bottom: 1.5px double white;
+}
+.bg-filter {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.footer-content{
+    width: auto;
+    margin: 170px auto 0 auto;
+    color: white;
+    text-align:center;
+}
+.footer-content a{
+    color: whitesmoke;
+}
+.footer-content a:hover{
+    text-decoration: none;
 }

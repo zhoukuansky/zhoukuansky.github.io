@@ -99,7 +99,7 @@ function showAdultsTime() {
     setTimeout("showAdultsTime()", 1000); 
 }
 /**
- * 显示本人走过的时间
+ * 显示人生走过的时间
  */
 function showMyTime() {
     var nowTime = new Date().getTime(); //获取毫秒数

@@ -15,16 +15,16 @@
 .work_info{
     text-align:center;
     margin-top: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     font-size: 1.2rem;
     font-weight: 100;
 }
-.work .row{
-    margin-top: 40px;
+.mywork{
+    margin-top: 10px;
 }
 .mywork-box{
-    min-height: 40vh;
     display: block;
+    margin: 0 10px;
 }
 .work-head{
     height: 30vh;
@@ -43,7 +43,7 @@
     width: 50%;
     text-align: center;
     margin: 0vh 25%;
-    color: rgb(161, 250, 235);
+    color: rgb(211, 241, 237);
     text-decoration:none;
     line-height: 10vh;
     font-size: 1.3rem;
@@ -54,7 +54,7 @@
     margin: 0vh;
     color: rgb(247, 247, 185);
     text-decoration:none;
-    background-color: #53571c;
+    background-color: #7e8340;
     /* 线性变化 0.5s */
     transition: all 0.5s linear;
     /* 旋转360度 */

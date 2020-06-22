@@ -3,7 +3,7 @@
 //     location.href = "./mini.html";
 // }
 // window.onresize = function () {
-//     if ($(window).width() <= 768 {
+//     if ($(window).width() <= 768) {
 //         location.href = "./mini.html";
 //     }
 // }

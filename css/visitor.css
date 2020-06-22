@@ -3,7 +3,7 @@
 }
 .visitor{
     width: 100%;
-    height: 115vh;
+    height: auto;
     min-height: 650px;
     background: rgb(13, 78, 131);
     background:url(../images/bg/sky.jpg) no-repeat;
@@ -11,14 +11,13 @@
     background-position-y: 50%;
     background-attachment:fixed;
     background-size: cover;
-    padding-top: 60px;
+    padding-top: 70px;
 }
 .visitor-head{
-    height: 25%;
     padding: 0 10px;
 }
 .visitor-body{
-    height: 75%;
+    
 }
 .visitor h1{
     color: white;

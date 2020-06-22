@@ -43,9 +43,9 @@
 
 <body id="">
     <header id="myInfo" class="myInfo">
-        <div class="info-button">
-            <a href="javascript:showInfo();">
-                <img id="info-button" src="images/icon/right.png" alt="icon" class="info-box-icon"
+        <div class="info-button" id="info-button">
+            <a href="javascript:showInfo(0);">
+                <img id="info-button-img" src="images/icon/right.png" alt="icon" class="info-box-icon"
                     style="transform: rotate(0deg);">
             </a>
         </div>
@@ -130,7 +130,7 @@
                 <li>
                     <div class="hover-background-filter"></div>
                     <span class="info-list-content">
-                        <strong>邮箱：</strong><a href="mailto:zhoukuansky@163.com">zhoukuansky@163.com</a>
+                        <strong>邮箱：</strong><a class="email-red" href="mailto:zhoukuansky@163.com">zhoukuansky@163.com</a>
                     </span>
                 </li>
             </ul>
@@ -149,11 +149,8 @@
                     <h1>Je pense donc je suis</h1>
                 </div>
                 <div class="code">
-                    <!-- <span><strong>printf("</strong></span> -->
                     <span><strong class="typedjs"></strong></span>
-                    <!-- <span><strong>");</strong></span> -->
                 </div>
-                <div class="go-mybolg">右上角前往我的博客网站</div>
                 <div class="chnia" id="showMyLifeTime">
                     <span>愿你走出半生</span><br>
                     <span>归来仍是少年</span><br>
@@ -191,9 +188,9 @@
     <section class="work">
         <h1>我的作品</h1>
         <div class="work_info">以下为2019-2020部分作品</div>
-        <div class="container-fluid">
+        <div class="container-fluid my-setting">
             <div class="row justify-content-center">
-                <div class="col-md-3 col-sm-5 col-5 mywork">
+                <div class="col-md-4 col-sm-5  mywork">
                     <div class="mywork-box">
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/IOT.png" alt="">
@@ -208,7 +205,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-5 col-5 mywork">
+                <div class="col-md-4 col-sm-5 mywork">
                     <div class="mywork-box">
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/river.png" alt="">
@@ -223,7 +220,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-5 col-5 mywork">
+                <div class="col-md-4 col-sm-5 mywork">
                     <div class="mywork-box">
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/blog.png" alt="">
@@ -238,9 +235,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-3 col-sm-5 col-5 mywork">
+                <div class="col-md-4 col-sm-5 mywork">
                     <div class="mywork-box">
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/recycle.png" alt="">
@@ -255,7 +250,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-5 col-5 mywork">
+                <div class="col-md-4 col-sm-5 mywork">
                     <div class="mywork-box">
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/plant.png" alt="">
@@ -369,7 +364,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-4 contact-head">
                     <h1>Contact Me</h1>
-                    <a href="javascript:showInfo();" class="send-email">Send Email to me</a>
+                    <a href="javascript:showInfo(1);" class="send-email">Send Email to me</a>
                 </div>
                 <div class="col-md-6">
                     <p class="contact-title">

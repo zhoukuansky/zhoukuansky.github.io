@@ -1,10 +1,3 @@
-// var hasAnimation = {    //  动画是否需要执行，false不需要，true需要
-//     work: true,
-//     git: true,
-//     ability: true,
-//     card: true
-// }
-
 $(function () {
     //在globe.js问及暗中定义
     initGlobe();
@@ -20,65 +13,75 @@ $(function () {
     }
     //显示本站走过的时间
     showAdultsTime();
-    //显示本站走过的时间
+    //显示总时间
     showMyTime();
-    
 })
 
 /**
  * 个人信息展示切换
  */
-function showInfo() {
-    if ($("#myInfo").css("left") == "-400px") {
-        $("#myInfo").css("left", "0px");
-        $("#info-button").css("transform", "rotate(180deg)");
-        $("#info-button").css("animation", "imgChange2 2s ease infinite");
-    } else {
-        $("#myInfo").css("left", "-400px");
-        $("#info-button").css("transform", "rotate(0deg)");
-        $("#info-button").css("animation", "imgChange1 2s ease infinite");
-    }
+var isShow=false;
+function showInfo(num) {
+    const vw = window.innerWidth;
+    if (vw >= 768) {
+        if(num==1){
+            $(".email-red").css("color", "red");
+        }
+        if (!isShow) {
+            $("#myInfo").css("left", "0px");
+            $("#info-button-img").css("transform", "rotate(180deg)");
+            $("#info-button-img").css("animation", "imgChange2 2s ease infinite");
+            isShow=!isShow;
+        } else {
+            $("#myInfo").css("left", "-400px");
+            $("#info-button-img").css("transform", "rotate(0deg)");
+            $("#info-button-img").css("animation", "imgChange1 2s ease infinite");
+            $("#info-button").css("right", "-60px");
+            isShow=!isShow;
 
+            $(".email-red").css("color", "rgb(81, 136, 238)");
+        }
+    }else{
+        if(num==1){
+            $(".email-red").css("color", "red");
+        }
+        if (!isShow) {
+            $("#myInfo").css("left", "0%");
+            $("#info-button-img").css("transform", "rotate(180deg)");
+            $("#info-button-img").css("animation", "imgChange2 2s ease infinite");
+            $("#info-button").css("right", "0px");
+            isShow=!isShow;
+        } else {
+            $("#myInfo").css("left", "-100%");
+            $("#info-button-img").css("transform", "rotate(0deg)");
+            $("#info-button-img").css("animation", "imgChange1 2s ease infinite");
+            $("#info-button").css("right", "-60px");
+            isShow=!isShow;
+
+            $(".email-red").css("color", "rgb(81, 136, 238)");
+        }
+    }
 }
 
-// /**
-//  * 判断dom元素是否出现在视野内
-//  * @param $Obj jquery元素
-//  * @returns {boolean}
-//  */
-// function checkShow($Obj) { // 传入jq对象
-//     var sTop = $(window).scrollTop();  //即页面向上滚动的距离
-//     var wHeight = $(window).height(); // 浏览器自身的高度
-//     var offsetTop = $Obj.offset().top;  //目标标签img相对于document顶部的位置
-
-//     if (offsetTop < (sTop + wHeight) && offsetTop > sTop) { //在2个临界状态之间的就为出现在视野中的
-//         return true;
-//     }
-//     return false;
-// }
-
-// /**
-//  * 判断dom元素是否出现在视野内
-//  * @param el dom元素
-//  * @returns {boolean}
-//  */
-// function elementInViewport2(el) {
-//     var top = el.offsetTop;
-//     var left = el.offsetLeft;
-//     var width = el.offsetWidth;
-//     var height = el.offsetHeight;
-
-//     while (el.offsetParent) {
-//         el = el.offsetParent;
-//         top += el.offsetTop;
-//         left += el.offsetLeft;
-//     }
-
-//     return (
-//         top < (window.pageYOffset + window.innerHeight) &&
-//         left < (window.pageXOffset + window.innerWidth) &&
-//         (top + height) > window.pageYOffset &&
-//         (left + width) > window.pageXOffset
-//     );
-// }
-
+/**
+ * 跟个人信息展示一脉相承
+ */
+window.onresize = function () {
+    if ($(window).width() <= 768) {
+        if($("#myInfo").css("left")=="-400px"){
+            $("#myInfo").css("left", "-100%");
+        }
+        if($("#info-button").css("right")=="-60px"&&isShow){
+            $("#info-button").css("right", "0px");
+        }    
+    }
+    else {
+        console.log($("#myInfo").css("left"))
+        if($("#myInfo").css("left")!="-400px"&&$("#myInfo").css("left")!="0px"){
+            $("#myInfo").css("left", "-400px");
+        }
+        if($("#info-button").css("right")=="0px"){
+            $("#info-button").css("right", "-60px");
+        }
+    }
+}

@@ -1,5 +1,5 @@
 .my-setting{
-    padding: 0 30px;
+    padding: 0 10%;
 }
 .skill{
     width: 100%;
@@ -13,10 +13,11 @@
 }
 .skill-bg{
     background-color:rgba(0, 0, 0, 0.5);
-    padding: 10px 0;
+    padding: 50px 0;
 }
 .skill-title-word{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid white;
 }
 .skill-list {
     list-style: none;

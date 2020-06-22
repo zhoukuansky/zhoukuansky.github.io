@@ -46,16 +46,20 @@ function initGlobe() {
 //页面中加载globe的大小和位置
 function globeLcation() {
     const vw = window.innerWidth;
+   
     //返回较大的那个值，通过下列式子 转换成了最大值为500，最小值为300
     const diam = Math.max(300, Math.min(500, vw - (vw * .6)));
     const radius = diam / 2;
     canvas.width = diam;
     canvas.height = diam;
     globe.projection.scale(radius).translate([radius, radius]);
-    var vpx = -0.4 * diam + 200;
+    var vpx = 0.2 * diam + 20;
     $(".visitor-body").css("padding-top", vpx + "px");
-    // console.log(vpx+"px")
-    // console.log()
+    $(".visitor-body").css("padding-bottom", vpx + "px");
+
+    //和globe无关的设置index主题的padding-top
+    var indexTop=0.05*diam+5;
+    $(".index-h1").css("padding-top", indexTop + "vh");
 }
 
 //自定义插件将自动围绕其垂直方向旋转地球

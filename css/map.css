@@ -6,11 +6,10 @@
     height: auto;
     min-height: 650px;
     background: rgb(13, 78, 131);
-    background:url(../images/bg/sky.jpg) no-repeat;
+    background:url(../images/bg/sky.jpg);
     background-position-x: 50%;
     background-position-y: 50%;
     background-attachment:fixed;
-    background-size: cover;
     padding-top: 70px;
 }
 .visitor-head{

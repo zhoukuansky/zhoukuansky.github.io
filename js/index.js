@@ -5,17 +5,23 @@ $(function () {
     //通过typed-js插件打印文字，在commen.js中定义
     printWord();
 
-    var a = document.getElementById("QQ");
-    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
-        a.href = "mqqwpa://im/chat?chat_type=wpa&uin=1246886075&version=1&src_type=web&web_src=oicqzone.com";
-    } else {
-        a.href = "tencent://message/?uin=1246886075&Site=http://vps.shuidazhe.com&Menu=yes";
-    }
     //显示本站走过的时间
     showAdultsTime();
+
     //显示总时间
     showMyTime();
+
+    openQQ();
 })
+
+function openQQ(){
+    var a = document.getElementById("QQ");
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        a.href = "mqqwpa://im/chat?chat_type=wpa&uin=553392040&version=1&src_type=web&web_src=oicqzone.com";
+    } else {
+        a.href = "tencent://message/?uin=553392040&Site=http://vps.shuidazhe.com&Menu=yes";
+    }
+}
 
 /**
  * 个人信息展示切换
@@ -76,7 +82,6 @@ window.onresize = function () {
         }    
     }
     else {
-        console.log($("#myInfo").css("left"))
         if($("#myInfo").css("left")!="-400px"&&$("#myInfo").css("left")!="0px"){
             $("#myInfo").css("left", "-400px");
         }

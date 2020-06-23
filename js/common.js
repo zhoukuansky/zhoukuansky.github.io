@@ -2,6 +2,19 @@ var url = "http://114.115.243.22:8080/";
 var startTime=1592323200000;//建站时间
 var myLifeTime=873388800000;//起源时间
 
+var timeVue = new Vue({
+    el: '#showAdultsTime',
+    data: {
+        time: "你好",
+    },
+})
+var lifeVue = new Vue({
+    el: '#showMyLifeTime',
+    data: {
+        time: "你0好",
+    },
+})
+
 var app = new Vue({
     el: '#contact-form',
     data: {
@@ -39,9 +52,9 @@ var app = new Vue({
                 },
                 success: function (res) {
                     if (res.status == 0) {
-                        alert("发送信息成功!");
+                        alert("信息发送成功!");
                     } else {
-                        alert("发送信息失败！");
+                        alert("信息发送失败！");
                     }
                 }
             })
@@ -49,6 +62,14 @@ var app = new Vue({
     }
 })
 
+/**
+ * 监听enter键触发上列发送信息函数
+ */
+$(document).keydown(function (event) {
+    if (event.keyCode == 13) {
+        app.send();
+    }
+});
 
 
 /**
@@ -68,18 +89,7 @@ function printWord() {
     });
 }
 
-var timeVue = new Vue({
-    el: '#showAdultsTime',
-    data: {
-        time: "你好",
-    },
-})
-var lifeVue = new Vue({
-    el: '#showMyLifeTime',
-    data: {
-        time: "你0好",
-    },
-})
+
 
 /**
  * 显示本站走过的时间

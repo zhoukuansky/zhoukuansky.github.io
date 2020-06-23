@@ -13,17 +13,17 @@
 }
 .skill-bg{
     background-color:rgba(0, 0, 0, 0.5);
-    padding: 50px 0;
+    padding: 90px 0 80px 0;
 }
 .skill-title-word{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-bottom: 1px solid white;
 }
 .skill-list {
     list-style: none;
 }
 .skill-title {
-    margin: 5px 0;
+    margin: 20px 0 5px;
 }
 @media (max-width: 768px) { 
     .xiaoshi{

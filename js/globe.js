@@ -11,12 +11,9 @@ function initGlobe() {
     //配置生成地球的颜色
     globe.loadPlugin(planetaryjs.plugins.earth({
         topojson: { file: "data/world-110m-withlakes.json" },
-        // oceans: { fill: "#dddee0" },
-        // land: { fill: "#f7f7f7" },
-        // borders:  { stroke: 'rgb(194, 194, 194)' }
         oceans: { fill: '#000040' },
         land: { fill: '#1b72b0' },
-        borders: { stroke: '#000055' }
+        borders: { stroke: '#000055', lineWidth: 1, type: 'internal' }
     }));
     //配置鼠标拖动事件
     globe.loadPlugin(planetaryjs.plugins.drag({
@@ -28,8 +25,10 @@ function initGlobe() {
         }
     }))
     //加载点插件,并配置颜色
+    //ttl是显示的时间长短，
+    //angle是ping的最大角度（它将在其TTL范围内增长到此大小）；默认为5
     globe.loadPlugin(planetaryjs.plugins.pings({
-        color: "#df5f5f", ttl: 2000, angle: 2
+        color: "red", ttl: 3000, angle: 5
     }))
     //加载点
     addPingsThing();
@@ -38,7 +37,7 @@ function initGlobe() {
     //绘制globe的cavas
     globe.draw(canvas);
     //地球旋转的初始位置
-    globe.projection.rotate(China)
+    globe.projection.rotate(China);
     //监听窗口大小变化
     window.addEventListener("resize", () => globeLcation());
 }
@@ -46,19 +45,22 @@ function initGlobe() {
 //页面中加载globe的大小和位置
 function globeLcation() {
     const vw = window.innerWidth;
-   
+
     //返回较大的那个值，通过下列式子 转换成了最大值为500，最小值为300
     const diam = Math.max(300, Math.min(500, vw - (vw * .6)));
     const radius = diam / 2;
     canvas.width = diam;
     canvas.height = diam;
     globe.projection.scale(radius).translate([radius, radius]);
-    var vpx = 0.2 * diam + 20;
+    var vpx = -0.2 * diam + 220;
     $(".visitor-body").css("padding-top", vpx + "px");
     $(".visitor-body").css("padding-bottom", vpx + "px");
 
     //和globe无关的设置index主题的padding-top
-    var indexTop=0.05*diam+5;
+    var indexTop = 0.05 * diam + 5;
+    $(".index-h1").css("padding-top", indexTop + "vh");
+    //和globe无关的设置skill-bg的padding-top
+    var indexTop = 0.05 * diam + 5;
     $(".index-h1").css("padding-top", indexTop + "vh");
 }
 
@@ -74,6 +76,9 @@ function autorotate(dps) {
             },
             resume: function () {
                 paused = false;
+            },
+            ispaused: function () {
+                return paused;
             }
         };
 
@@ -89,8 +94,8 @@ function autorotate(dps) {
                 var rotation = planet.projection.rotate();
                 rotation[0] += dps * delta / 1000;
 
-                if (rotation[0] >= 180) 
-                rotation[0] -= 360;
+                if (rotation[0] >= 180)
+                    rotation[0] -= 360;
 
                 planet.projection.rotate(rotation);
                 lastTick = now;
@@ -107,7 +112,28 @@ function addPingsThing() {
         for (const c of data.coordinates) {
             setInterval(() => {
                 globe.plugins.pings.add(c[0], c[1]);
-            }, Math.floor(Math.random() * 3000) + 2000);
+            }, 3000);
         }
     })
 }
+
+
+/**
+ * 监听空格键，按下时地球停在中国上方
+ * 再次按下，继续转动
+ */
+$(document).keydown(function (event) {
+    
+    if (event.keyCode == 32) {
+        var paused = globe.plugins.autorotate.ispaused();
+        if (paused == false) {
+            globe.projection.rotate([250, -20, 0]);
+            globe.plugins.autorotate.pause();
+        } else if (paused == true) {
+            globe.plugins.autorotate.resume();
+        }
+        //去掉空格下滑事件
+        return false;
+    }
+});
+

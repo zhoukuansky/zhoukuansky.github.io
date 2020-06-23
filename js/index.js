@@ -12,6 +12,9 @@ $(function () {
     showMyTime();
 
     openQQ();
+
+    //获取定位
+    getPosition();
 })
 
 function openQQ(){

@@ -6,10 +6,10 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
     <meta property="og:title" content="周宽、zksky的个人网站主页">
-    <meta property="og:url" content="http://www.zksky.top/">
+    <meta property="og:url" content="https://www.zksky.top/">
     <meta property="og:type" content="website">
     <meta property="og:description" content="zksky的个人网站主页，一个看似小白、实则真·小白的IT界少年">
-    <meta property="og:image" content="http://www.zksky.top/images/me/me.jpg">
+    <meta property="og:image" content="https://www.zksky.top/images/me/me.jpg">
     <meta property="og:locale" content="zh-CN">
     <meta property="og:locale:alternate" content="en-US">
     <meta property="og:site_name" content="周宽、zksky的个人网站主页">
@@ -26,6 +26,8 @@
     <!-- 强制页面在当前窗口中以独立页面显示，防止自己的网页被别人当作一个frame页调用；  默认以chorme风格加载 -->
     <meta http-equiv="windows-Target" contect="_top">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--自动将http的不安全请求升级为https -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>zksky的个人主页</title>
 
     <link rel="shortcut icon" href="images/icon/favicon.png">
@@ -38,8 +40,6 @@
     <link rel="stylesheet" href="css/skill.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
-
-    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=SPykGZYHBM5agfqBYSZKqEvKGK7qdC7Q"></script>
     
 </head>
 
@@ -107,7 +107,7 @@
                 <li>
                     <div class="hover-background-filter"></div>
                     <span class="info-list-content">
-                        <strong>院校：</strong><a href="http://www.sicau.edu.cn">四川农业大学（本科）</a>
+                        <strong>院校：</strong><a href="https://www.sicau.edu.cn">四川农业大学（本科）</a>
                     </span>
                 </li>
                 <li>
@@ -119,7 +119,7 @@
                 <li>
                     <div class="hover-background-filter"></div>
                     <span class="info-list-content">
-                        <strong>博客：</strong><a href="http://blog.zksky.top" target="_blank">http://blog.zksky.top/</a>
+                        <strong>博客：</strong><a href="https://blog.zksky.top" target="_blank">https://blog.zksky.top/</a>
                     </span>
                 </li>
                 <li>
@@ -138,7 +138,7 @@
             </ul>
         </div>
         <div class="myBlog">
-            <center><a href="http://blog.zksky.top" target="_blank">
+            <center><a href="https://blog.zksky.top" target="_blank">
                     Blog
                 </a></center>
         </div>
@@ -165,11 +165,12 @@
 
     <section class="map">
         <div class="visitor">
-            <div class="visitor-head">
+            <div class="visitor-head"  id="location">
                 <h1>来访者星图</h1>
                 <div class="visitor-word">
-                    <span>宇宙之浩瀚，生命之微渺</span><br>
-                    <span>尽此生，愿无愧于心</span>
+                    <div>时空： {{address}} 的朋友</div>
+                    <div>序列： 本站第 {{order}} 次被发现</div>
+                    <div class="note">(基准： 600秒内不重复计算)</div>
                 </div>
             </div>
 
@@ -196,7 +197,7 @@
                     <div class="mywork-box">
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/IOT.png" alt="">
-                            <a href="http://my.zksky.top/IOTData/swagger-ui.html#" target="_black"
+                            <a href="https://zk.zksky.top/IOTData/swagger-ui.html#" target="_black"
                                 class="work-link">index</a>
                             <a href="https://gitee.com/zhoukuansky/IOTData" target="_black" class="work-link">gitee</a>
                             <a href="https://github.com/zhoukuansky/IOTData" target="_black" class="work-link"
@@ -226,7 +227,7 @@
                     <div class="mywork-box">
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/blog.png" alt="">
-                            <a href="http://blog.zksky.top/" target="_black" class="work-link">index</a>
+                            <a href="https://blog.zksky.top/" target="_black" class="work-link">index</a>
                             <a href="https://gitee.com/zhoukuansky/zkBlogCode" target="_black"
                                 class="work-link">gitee</a>
                             <a href="https://github.com/zhoukuansky/zkBlogCode" target="_black"
@@ -241,7 +242,7 @@
                     <div class="mywork-box">
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/recycle.png" alt="">
-                            <a href="http://my.zksky.top/recycle/swagger-ui.html#" target="_black"
+                            <a href="https://zk.zksky.top/recycle/swagger-ui.html#" target="_black"
                                 class="work-link">index</a>
                             <a href="https://gitee.com/zhoukuansky/recycle" target="_black" class="work-link">gitee</a>
                             <a href="https://github.com/zhoukuansky/recycle" target="_black"
@@ -256,7 +257,7 @@
                     <div class="mywork-box">
                         <div class="work-head">
                             <img class="work-logo" src="images/workIcon/plant.png" alt="">
-                            <a href="http://my.zksky.top/hydroponics/" target="_black" class="work-link">index</a>
+                            <a href="https://zk.zksky.top/hydroponics/" target="_black" class="work-link">index</a>
                             <a href="https://gitee.com/zhoukuansky/plantPro" target="_black" class="work-link">gitee</a>
                             <a href="https://github.com/zhoukuansky/plantPro" target="_black"
                                 class="work-link">github</a>
@@ -408,7 +409,7 @@
         <div class="bg-footer">
             <div class="footer-content">
                 <img src="images/icon/zk.png" alt="" width="50px"></br>
-                <a href="http://www.beian.miit.gov.cn/">蜀ICP备20010319号</a></br>
+                <a href="http://beian.miit.gov.cn/publish/query/indexFirst.action">蜀ICP备20010319号</a></br>
                 <span id="showAdultsTime">在风雨中走过 {{time}}</span></br>
                 <span>Copyright © 2020-2030 ZkSky. | All Rights Reserved.</span></br>
 
@@ -424,6 +425,8 @@
     <script type='text/javascript' src='assets/palnetary/d3.v3.min.js'></script>
     <script type='text/javascript' src='assets/palnetary/topojson.v1.min.js'></script>
     <script type='text/javascript' src='assets/palnetary/planetaryjs.min.js'></script>
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=SPykGZYHBM5agfqBYSZKqEvKGK7qdC7Q"></script>
+    <script src="assets/mylibrary/cookie.js"></script>
     <script src="js/common.js"></script>
     <script src="js/globe.js"></script>
     <script src="js/local.js"></script>

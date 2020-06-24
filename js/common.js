@@ -1,4 +1,4 @@
-var url = "http://114.115.243.22:8080/";
+var url = "https://zk.zksky.top/zkPage";
 var startTime=1592323200000;//建站时间
 var myLifeTime=873388800000;//起源时间
 
@@ -25,7 +25,7 @@ var app = new Vue({
     },
     methods: {
         /**
-        * 发送信息给我
+        * ajax发送联系作者的信息
         */
         send: function () {
             var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$"); //邮箱正则表达式
@@ -38,7 +38,7 @@ var app = new Vue({
                 return;
             }
             $.ajax({
-                url: url + "/myMessage",
+                url: url + "/message",
                 type: "POST",
                 dataType: "json",
                 data: {

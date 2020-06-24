@@ -28,10 +28,12 @@ function initGlobe() {
     //ttl是显示的时间长短，
     //angle是ping的最大角度（它将在其TTL范围内增长到此大小）；默认为5
     globe.loadPlugin(planetaryjs.plugins.pings({
-        color: "red", ttl: 3000, angle: 5
+        color: "yellow", ttl: 3000, angle: 5
     }))
     //加载点
     addPingsThing();
+    //获取最近访客的地址点
+    getAddr();
     //页面中加载globe的大小和位置
     globeLcation();
     //绘制globe的cavas
@@ -106,13 +108,36 @@ function autorotate(dps) {
 
 //加载点
 function addPingsThing() {
-    d3.json("data/coordinates.json", (error, data) => {
+    d3.json("data/life.json", (error, data) => {
         if (error) return console.error(error)
+        setInterval(() => {
+            for (const point of data.life) {
+                globe.plugins.pings.add(point[0], point[1]);
+            }
+        }, 3000);
+    })
+}
 
-        for (const c of data.coordinates) {
-            setInterval(() => {
-                globe.plugins.pings.add(c[0], c[1]);
-            }, 3000);
+
+//ajax获取最近访客的地址点
+function getAddr() {
+    $.ajax({
+        url: url + "/getAddr",
+        type: "GET",
+        dataType: "json",
+        data: {
+        },
+        ContentType: "application/json",
+        headers: {
+        },
+        success: function (res) {
+            setTimeout(function () {
+                setInterval(() => {
+                    for (const point of res.data) {
+                        globe.plugins.pings.add(point[0], point[1],{ color: "white"});
+                    }
+                }, 3000);
+            }, 1200);
         }
     })
 }
@@ -123,7 +148,7 @@ function addPingsThing() {
  * 再次按下，继续转动
  */
 $(document).keydown(function (event) {
-    
+
     if (event.keyCode == 32) {
         var paused = globe.plugins.autorotate.ispaused();
         if (paused == false) {

@@ -1,4 +1,4 @@
-function setCookie(name, value,time) {
+function setCookie(name, value, time) {
     let exp = new Date();
     //设置过期时间10分钟
     exp.setTime(exp.getTime() + time * 1000);

@@ -30,6 +30,7 @@ function openQQ() {
  * 个人信息展示切换
  */
 var isShow = false;
+
 function showInfo(num) {
     const vw = window.innerWidth;
     if (vw >= 768) {
@@ -83,8 +84,7 @@ window.onresize = function () {
         if ($("#info-button").css("right") == "-60px" && isShow) {
             $("#info-button").css("right", "0px");
         }
-    }
-    else {
+    } else {
         if ($("#myInfo").css("left") != "-400px" && $("#myInfo").css("left") != "0px") {
             $("#myInfo").css("left", "-400px");
         }

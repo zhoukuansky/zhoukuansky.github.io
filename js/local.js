@@ -1,78 +1,75 @@
 var geoc = new BMap.Geocoder();
 
-var addrInfo={
-    province:"",
-    city:"",
-    district:"",
-    street:"",
-    streetNumber:"",
-    lng:"",
-    lat:"",
+var addrInfo = {
+    province: "",
+    city: "",
+    district: "",
+    street: "",
+    streetNumber: "",
+    lng: "",
+    lat: "",
 }
 
 var locationVue = new Vue({
     el: '#location',
     data: {
         address: "未知•次元",
-        order:"0",
+        order: "0",
     },
 })
 
 //ajax获取访问次数
-function getOrder(){
+function getOrder() {
     $.ajax({
         url: url + "/getOrder",
         type: "GET",
         dataType: "json",
-        data: {
-        },
+        data: {},
         ContentType: "application/json",
-        headers: {
-        },
+        headers: {},
         success: function (res) {
-            locationVue.order=res.data.order+1;
+            locationVue.order = res.data.order + 1;
         }
     })
 }
 
 
 //获取缓存
-function getLocationCache(){
-    var value=getCookie("locationCache");
+function getLocationCache() {
+    var value = getCookie("locationCache");
     //缓存为空，重新定位并计算一次访问
-    if(null==value){
+    if (null == value) {
         getPosition();
         sendAddrInfo();
-    }else{
+    } else {
         //如果缓存内容是"未知•次元"，意味着上次定位失败了。则重新定位。
-        if(value=="未知•次元"){
+        if (value == "未知•次元") {
             getPosition();
-        }else{
-            locationVue.address=value;
+        } else {
+            locationVue.address = value;
         }
     }
 }
 
 //发送位置信息给后端
-function sendAddrInfo(){
+function sendAddrInfo() {
     $.ajax({
         url: url + "/addrInfo",
         type: "POST",
         dataType: "json",
         data: {
-            province:addrInfo.province,
-            city:addrInfo.city,
-            district:addrInfo.district,
-            street:addrInfo.street,
-            streetNumber:addrInfo.streetNumber,
-            lng:addrInfo.lng,
-            lat:addrInfo.lat,
+            province: addrInfo.province,
+            city: addrInfo.city,
+            district: addrInfo.district,
+            street: addrInfo.street,
+            streetNumber: addrInfo.streetNumber,
+            lng: addrInfo.lng,
+            lat: addrInfo.lat,
         },
         ContentType: "application/json",
-        headers: {
-        },
+        headers: {},
         success: function (res) {
-            setCookie("locationCache",locationVue.address,600);
+            setCookie("locationCache", locationVue.address, 600);
         }
     })
 }
@@ -81,12 +78,12 @@ function sendAddrInfo(){
 function addressResolution(point) {
     geoc.getLocation(point, function (rs) {
         var addComp = rs.addressComponents;
-        addrInfo.province=addComp.province;
-        addrInfo.city=addComp.city;
-        addrInfo.district=addComp.district;
-        addrInfo.district=addComp.province;
-        addrInfo.streetNumber=addComp.streetNumber;
-        locationVue.address=addComp.province+" • "+addComp.city;
+        addrInfo.province = addComp.province;
+        addrInfo.city = addComp.city;
+        addrInfo.district = addComp.district;
+        addrInfo.district = addComp.province;
+        addrInfo.streetNumber = addComp.streetNumber;
+        locationVue.address = addComp.province + " • " + addComp.city;
     });
 }
 
@@ -142,17 +139,16 @@ function showError(error) {
     //         alert("未知错误。")
     //         break;
     // }
-    var geolocation = new   BMap.Geolocation();
+    var geolocation = new BMap.Geolocation();
     geolocation.getCurrentPosition(function (r) {
         if (this.getStatus() == BMAP_STATUS_SUCCESS) {
 
-            addrInfo.lng  = r.point.lng 
-            addrInfo.lat  = r.point.lat;
+            addrInfo.lng = r.point.lng
+            addrInfo.lat = r.point.lat;
             //地址解析
             addressResolution(r.point);
-        }
-        else {
+        } else {
             console.log("定位失败");
         }
-    }, { enableHighAccuracy: true })
+    }, {enableHighAccuracy: true})
 }

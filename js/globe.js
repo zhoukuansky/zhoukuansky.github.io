@@ -10,10 +10,10 @@ function initGlobe() {
     globe.loadPlugin(autorotate(10));
     //配置生成地球的颜色
     globe.loadPlugin(planetaryjs.plugins.earth({
-        topojson: { file: "data/world-110m-withlakes.json" },
-        oceans: { fill: '#000040' },
-        land: { fill: '#1b72b0' },
-        borders: { stroke: '#000055', lineWidth: 1, type: 'internal' }
+        topojson: {file: "data/world-110m-withlakes.json"},
+        oceans: {fill: '#000040'},
+        land: {fill: '#1b72b0'},
+        borders: {stroke: '#000055', lineWidth: 1, type: 'internal'}
     }));
     //配置鼠标拖动事件
     globe.loadPlugin(planetaryjs.plugins.drag({
@@ -125,16 +125,14 @@ function getAddr() {
         url: url + "/getAddr",
         type: "GET",
         dataType: "json",
-        data: {
-        },
+        data: {},
         ContentType: "application/json",
-        headers: {
-        },
+        headers: {},
         success: function (res) {
             setTimeout(function () {
                 setInterval(() => {
                     for (const point of res.data) {
-                        globe.plugins.pings.add(point[0], point[1],{ color: "white"});
+                        globe.plugins.pings.add(point[0], point[1], {color: "white"});
                     }
                 }, 3000);
             }, 1200);

@@ -1,6 +1,6 @@
-var url = "https://zk.zksky.top/zkPage";
-var startTime=1592323200000;//建站时间
-var myLifeTime=873388800000;//起源时间
+var url = "http://127.0.0.1:8080/zkSky";
+var startTime = 1591891200000;//建站时间
+var myLifeTime = 873388800000;//起源时间
 
 var timeVue = new Vue({
     el: '#showAdultsTime',
@@ -25,8 +25,8 @@ var app = new Vue({
     },
     methods: {
         /**
-        * ajax发送联系作者的信息
-        */
+         * ajax发送联系作者的信息
+         */
         send: function () {
             var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$"); //邮箱正则表达式
             if (app.name == "" || app.email == "" || app.subject == "" || app.content == "") {
@@ -48,8 +48,7 @@ var app = new Vue({
                     content: app.content,
                 },
                 ContentType: "application/json",
-                headers: {
-                },
+                headers: {},
                 success: function (res) {
                     if (res.status == 0) {
                         alert("信息发送成功!");
@@ -90,42 +89,45 @@ function printWord() {
 }
 
 
-
 /**
  * 显示本站走过的时间
  */
 function showAdultsTime() {
     var nowTime = new Date().getTime(); //获取毫秒数
-    var MS=nowTime-startTime;
-    var allDay=Math.floor(MS/86400000);
-    MS=MS%86400000;
-    var allH=Math.floor(MS/3600000);
-    MS=MS%3600000;
-    var allM=Math.floor(MS/60000);
-    MS=MS%60000;
-    var allS=Math.floor(MS/1000);
-    timeVue.time = allDay+"天" + checkTime(allH)+"时" + checkTime(allM)+"分"+ checkTime(allS)+"秒"; 
+    var MS = nowTime - startTime;
+    var allDay = Math.floor(MS / 86400000);
+    MS = MS % 86400000;
+    var allH = Math.floor(MS / 3600000);
+    MS = MS % 3600000;
+    var allM = Math.floor(MS / 60000);
+    MS = MS % 60000;
+    var allS = Math.floor(MS / 1000);
+    timeVue.time = allDay + "天" + checkTime(allH) + "时" + checkTime(allM) + "分" + checkTime(allS) + "秒";
     //定时器
-    setTimeout("showAdultsTime()", 1000); 
+    setTimeout("showAdultsTime()", 1000);
 }
+
 /**
  * 显示人生走过的时间
  */
 function showMyTime() {
     var nowTime = new Date().getTime(); //获取毫秒数
-    var MS=nowTime-myLifeTime;
-    var allDay=Math.floor(MS/86400000);
-    MS=MS%86400000;
-    var allH=Math.floor(MS/3600000);
-    MS=MS%3600000;
-    var allM=Math.floor(MS/60000);
-    MS=MS%60000;
-    var allS=Math.floor(MS/1000);
-    lifeVue.time = allDay+"天" + checkTime(allH)+"时" + checkTime(allM)+"分"+ checkTime(allS)+"秒"; 
+    var MS = nowTime - myLifeTime;
+    var allDay = Math.floor(MS / 86400000);
+    MS = MS % 86400000;
+    var allH = Math.floor(MS / 3600000);
+    MS = MS % 3600000;
+    var allM = Math.floor(MS / 60000);
+    MS = MS % 60000;
+    var allS = Math.floor(MS / 1000);
+    lifeVue.time = allDay + "天" + checkTime(allH) + "时" + checkTime(allM) + "分" + checkTime(allS) + "秒";
     //定时器
-    setTimeout("showMyTime()", 1000); 
+    setTimeout("showMyTime()", 1000);
 }
+
 function checkTime(i) {
-    if (i < 10) { i = "0" + i }
+    if (i < 10) {
+        i = "0" + i
+    }
     return i;
 }

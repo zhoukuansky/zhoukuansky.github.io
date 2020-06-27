@@ -85,7 +85,7 @@ function sendAddrInfo() {
 function addressResolution(point) {
     $.ajax({
         type: "get",
-        async: false,
+        async: false,//jsonp请求时，此设置失效，只能异步
         url: "https://apis.map.qq.com/ws/geocoder/v1",
         data: {
             key: tengxun_key,
@@ -110,6 +110,7 @@ function addressResolution(point) {
                 res.result.address_component.city = res.result.address_component.city.substr(0, res.result.address_component.city.length - 1)
             }
             locationVue.address = res.result.address_component.nation + " • " + res.result.address_component.province + " • " + res.result.address_component.city;
+            //发送位置信息给后端
             sendAddrInfo();
         },
         error: function (res) {
@@ -140,7 +141,6 @@ function showPosition(position) {
     var y = position.coords.latitude;//纬度 
     $.ajax({
         type: "get",
-        async: false,
         url: "https://apis.map.qq.com/ws/coord/v1/translate",
         data: {
             key: tengxun_key,
@@ -153,7 +153,7 @@ function showPosition(position) {
             addrInfo.lng = res.locations.lng;
             addrInfo.lat = res.locations.lat;
             //地址解析
-            addressResolution(res.locations);
+            addressResolution(res.locations[0]);
         },
         error: function (res) {
             console.log("腾讯坐标转换失败");
@@ -177,24 +177,36 @@ function showError(error) {
     //         alert("未知错误。")
     //         break;
     // }
-    $.ajax({
-        type: "get",
-        async: false,
-        url: "https://apis.map.qq.com/ws/location/v1/ip",
-        data: {
-            key: tengxun_key,
-            output: "jsonp",
-        },
-        dataType: "jsonp",//数据类型为jsonp  
-        success: function (res) {
-            addrInfo.lng = res.result.location.lng;
-            addrInfo.lat = res.result.location.lat;
-            //地址解析
-            addressResolution(res.result.location);
-        },
-        error: function (res) {
-            console.log("腾讯定位失败");
+    var geolocation = new BMap.Geolocation({
+        maximumAge:0  // 清除缓存
+      });
+    geolocation.getCurrentPosition(function (r) {
+        if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+            $.ajax({
+                type: "get",
+                url: "https://apis.map.qq.com/ws/coord/v1/translate",
+                data: {
+                    key: tengxun_key,
+                    output: "jsonp",
+                    locations: r.point.lat + "," + r.point.lng,
+                    type: 3,
+                },
+                dataType: "jsonp",//数据类型为jsonp  
+                success: function (res) {
+                    addrInfo.lng = res.locations.lng;
+                    addrInfo.lat = res.locations.lat;
+                    console.log(res)
+                    //地址解析
+                    addressResolution(res.locations[0]);
+                },
+                error: function (res) {
+                    console.log("腾讯坐标转换失败");
+                }
+            });
         }
-    });
-
+        else {
+            alert("定位失败");
+        }
+    }, { enableHighAccuracy: true })
+    
 }

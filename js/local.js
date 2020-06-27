@@ -150,8 +150,8 @@ function showPosition(position) {
         },
         dataType: "jsonp",//数据类型为jsonp  
         success: function (res) {
-            addrInfo.lng = res.locations.lng;
-            addrInfo.lat = res.locations.lat;
+            addrInfo.lng = res.locations[0].lng;
+            addrInfo.lat = res.locations[0].lat;
             //地址解析
             addressResolution(res.locations[0]);
         },
@@ -193,8 +193,8 @@ function showError(error) {
                 },
                 dataType: "jsonp",//数据类型为jsonp  
                 success: function (res) {
-                    addrInfo.lng = res.locations.lng;
-                    addrInfo.lat = res.locations.lat;
+                    addrInfo.lng = res.locations[0].lng;
+                    addrInfo.lat = res.locations[0].lat;
                     //地址解析
                     addressResolution(res.locations[0]);
                 },

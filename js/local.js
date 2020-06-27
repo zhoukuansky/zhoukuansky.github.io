@@ -195,7 +195,6 @@ function showError(error) {
                 success: function (res) {
                     addrInfo.lng = res.locations.lng;
                     addrInfo.lat = res.locations.lat;
-                    console.log(res)
                     //地址解析
                     addressResolution(res.locations[0]);
                 },

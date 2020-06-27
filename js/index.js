@@ -15,6 +15,7 @@ $(function () {
 
     //获取定位_local.js
     getLocationCache();
+
 })
 
 function openQQ() {
@@ -93,3 +94,24 @@ window.onresize = function () {
         }
     }
 }
+
+
+// function test() {
+//     $.ajax({
+//         type: "get",
+//         url: "https://apis.map.qq.com/ws/geocoder/v1",
+//         data:{
+//             key:tengxun_key,
+//             output:"jsonp",
+//             location:"29.99971634,103.00935647",
+//             get_poi:0,
+//         },
+//         dataType: "jsonp",//数据类型为jsonp  
+//         success: function (data) {
+//             console.log(data)
+//         },
+//         error: function (res) {
+//             console.log("腾讯定位失败");
+//         }
+//     });
+// }

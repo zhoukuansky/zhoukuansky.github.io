@@ -10,10 +10,10 @@ function initGlobe() {
     globe.loadPlugin(autorotate(10));
     //配置生成地球的颜色
     globe.loadPlugin(planetaryjs.plugins.earth({
-        topojson: {file: "data/world-110m-withlakes.json"},
-        oceans: {fill: '#000040'},
-        land: {fill: '#1b72b0'},
-        borders: {stroke: '#000055', lineWidth: 1, type: 'internal'}
+        topojson: { file: "data/world-110m-withlakes.json" },
+        oceans: { fill: '#000040' },
+        land: { fill: '#1b72b0' },
+        borders: { stroke: '#000055', lineWidth: 1, type: 'internal' }
     }));
     //配置鼠标拖动事件
     globe.loadPlugin(planetaryjs.plugins.drag({
@@ -28,7 +28,7 @@ function initGlobe() {
     //ttl是显示的时间长短，
     //angle是ping的最大角度（它将在其TTL范围内增长到此大小）；默认为5
     globe.loadPlugin(planetaryjs.plugins.pings({
-        color: "yellow", ttl: 3000, angle: 5
+        color: "yellow", ttl: 2000, angle: 3
     }))
     //加载点
     addPingsThing();
@@ -109,12 +109,12 @@ function autorotate(dps) {
 //加载点
 function addPingsThing() {
     d3.json("data/life.json", (error, data) => {
-        if (error) return console.error(error)
-        setInterval(() => {
-            for (const point of data.life) {
-                globe.plugins.pings.add(point[0], point[1]);
-            }
-        }, 3000);
+        if (error) return console.error(error);
+            setInterval(() => {
+                for (const point of data.life) {
+                    globe.plugins.pings.add(point[0], point[1], { color: "white",ttl: 3000, angle: 5 });
+                }
+            }, 3000);
     })
 }
 
@@ -122,20 +122,17 @@ function addPingsThing() {
 //ajax获取最近访客的地址点
 function getAddr() {
     $.ajax({
-        url: url + "/getAddr",
+        url: url + "/webData/getAddr",
         type: "GET",
         dataType: "json",
         data: {},
-        ContentType: "application/json",
         headers: {},
         success: function (res) {
-            setTimeout(function () {
-                setInterval(() => {
-                    for (const point of res.data) {
-                        globe.plugins.pings.add(point[0], point[1], {color: "white"});
-                    }
-                }, 3000);
-            }, 1200);
+            setInterval(() => {
+                for (const point of res.data) {
+                    globe.plugins.pings.add(point.lng, point.lat);
+                }
+            }, 2000);
         }
     })
 }

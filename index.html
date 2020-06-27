@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="css/skill.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
-    
+
 </head>
 
 <body id="">
@@ -132,7 +132,8 @@
                 <li>
                     <div class="hover-background-filter"></div>
                     <span class="info-list-content">
-                        <strong>邮箱：</strong><a class="email-red" href="mailto:zhoukuansky@163.com">zhoukuansky@163.com</a>
+                        <strong>邮箱：</strong><a class="email-red"
+                            href="mailto:zhoukuansky@163.com">zhoukuansky@163.com</a>
                     </span>
                 </li>
             </ul>
@@ -165,12 +166,16 @@
 
     <section class="map">
         <div class="visitor">
-            <div class="visitor-head"  id="location">
+            <div class="visitor-head" id="location">
                 <h1>来访者星图</h1>
                 <div class="visitor-word">
                     <div>时空： {{address}} 的朋友</div>
-                    <div>序列： 本站第 {{order}} 次被发现</div>
+                    <div>序列： 你是我第 {{order}} 次遇见</div>
                     <div class="note">(基准： 600秒内不重复计算)</div>
+                    <div class="col-md-auto  col-sm-auto col-auto">
+                            <div class="other2">白色：足迹</div>
+                      
+                    </div>
                 </div>
             </div>
 
@@ -182,6 +187,9 @@
                                 <canvas id="globe"></canvas>
                             </div>
                         </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        
                     </div>
                 </div>
             </div>
@@ -368,8 +376,8 @@
                 <div class="col-md-4 contact-head">
                     <h1>Contact Me</h1>
                     <a href="javascript:showInfo(1);" class="send-email">Send Email to me</a>
-                                   </div>
-                    <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
                     <p class="contact-title">
                         联系作者<img src="images/icon/logo.png" width="40px" alt="">
                     </p>
@@ -425,7 +433,6 @@
     <script type='text/javascript' src='assets/palnetary/d3.v3.min.js'></script>
     <script type='text/javascript' src='assets/palnetary/topojson.v1.min.js'></script>
     <script type='text/javascript' src='assets/palnetary/planetaryjs.min.js'></script>
-    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=SPykGZYHBM5agfqBYSZKqEvKGK7qdC7Q"></script>
     <script src="assets/mylibrary/cookie.js"></script>
     <script src="js/common.js"></script>
     <script src="js/globe.js"></script>

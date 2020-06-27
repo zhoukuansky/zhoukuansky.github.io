@@ -1,4 +1,5 @@
-var url = "http://127.0.0.1:8080/zkSky";
+// var url = "https://zk.zksky.top/zkSky";
+var  url = "https://127.0.0.1:8080"
 var startTime = 1591891200000;//建站时间
 var myLifeTime = 873388800000;//起源时间
 
@@ -37,25 +38,31 @@ var app = new Vue({
                 alert("错误：请填写合法邮箱！");
                 return;
             }
+            var userId = getCookie("userId");
             $.ajax({
-                url: url + "/message",
+                url: url + "/contactMe/message",
                 type: "POST",
                 dataType: "json",
-                data: {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                data: JSON.stringify({
+                    userId: userId,
                     name: app.name,
                     email: app.email,
                     subject: app.subject,
                     content: app.content,
-                },
-                ContentType: "application/json",
-                headers: {},
+                }),
                 success: function (res) {
-                    if (res.status == 0) {
-                        alert("信息发送成功!");
-                    } else {
-                        alert("信息发送失败！");
-                    }
+                    if(res.status==0)
+                    alert("信息发送成功");
+                    else
+                    alert("信息发送失败!");
+                },
+                error: function (res) {
+                    alert("信息发送失败!");
                 }
+
             })
         }
     }

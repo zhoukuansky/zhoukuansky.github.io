@@ -1,6 +1,6 @@
 //var url = "https://zk.zksky.top/zkSky";
   var  url = "http://127.0.0.1:8080";
-var startTime = 1591891200000;//建站时间
+var startTime = 1591718400000;//建站时间
 var myLifeTime = 873388800000;//起源时间
 
 var timeVue = new Vue({

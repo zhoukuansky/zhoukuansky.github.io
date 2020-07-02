@@ -1,5 +1,5 @@
-var url = "https://zk.zksky.top/zkSky";
-//   var  url = "http://127.0.0.1:8080";
+//   var url = "https://zk.zksky.top/zkSky";
+  var  url = "http://127.0.0.1:8080";
 var startTime = 1591718400000;//建站时间
 var myLifeTime = 873388800000;//起源时间
 
@@ -88,9 +88,15 @@ function printWord() {
             'I\'m Zksky!',
             '译：我思故我在',
         ],
+        //打印的速度。单位ms
         typeSpeed: 150,
+        //设置循环，为真，开启循环
         loop: true,
+        //打印前的延迟时间
+        startDelay: 0,
+        //打印后的延迟时间
         backDelay: 2000,
+        //返回的速度
         backSpeed: 30
     });
 }

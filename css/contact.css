@@ -1,0 +1,60 @@
+.contact {
+    background: #2f2f2f;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.contact-head {
+    margin-bottom: 60px;
+}
+
+.contact h1 {
+    color: white;
+}
+
+.send-email {
+    font-size: 1.5rem;
+    color: #448bbb;
+    text-decoration: underline;
+}
+
+.send-email:hover {
+    color: rgb(216, 35, 35);
+}
+
+.contact-title {
+    font-size: 1.5rem;
+}
+
+.send-result {
+    color: rgb(253, 36, 7);
+}
+
+.contact-form label {
+    color: #999;
+    font-size: 1.2rem;
+}
+
+textarea.form-control {
+    height: 200px;
+}
+
+.contact-form .form-send {
+    text-align: center;
+}
+
+.contact-form .form-send button {
+    background: #448bbb;
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: 0.4s;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.error {
+    color: red !important;
+    font-size: 0.9rem !important;
+}

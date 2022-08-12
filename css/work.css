@@ -1,0 +1,101 @@
+.work {
+    width: 100%;
+    height: auto;
+    background: #fdfcf8;
+    padding: 80px 0;
+}
+
+.work h1 {
+    font-size: 3rem;
+    font-weight: 1000;
+    color: black;
+    text-align: center;
+    -webkit-text-stroke: 0.5px black;
+
+}
+
+.work_info {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.mywork {
+    margin-top: 10px;
+}
+
+.mywork-box {
+    display: block;
+    margin: 0 10px;
+}
+
+.work-head {
+    height: 30vh;
+    min-height: 210px;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0 1px 4px rgba(37, 37, 29, 0.788);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.work-link {
+    display: none;
+    height: 10vh;
+    min-height: 70px;
+    width: 50%;
+    text-align: center;
+    margin: 0vh 25%;
+    color: rgb(211, 241, 237);
+    text-decoration: none;
+    line-height: 10vh;
+    font-size: 1.3rem;
+    border-radius: 3px;
+}
+
+.work-link:hover {
+    width: 100%;
+    margin: 0vh;
+    color: rgb(247, 247, 185);
+    text-decoration: none;
+    background-color: #7e8340;
+    /* 线性变化 0.5s */
+    transition: all 0.5s linear;
+    /* 旋转360度 */
+    /* transform: rotate(360deg); */
+}
+
+.work-logo {
+    display: block;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.work-head:hover {
+    display: block;
+    background: url(../images/bg/bg-link.jpg) no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    /* transition: all 0.7s linear; */
+}
+
+.work-head:hover .work-link {
+    display: block;
+}
+
+.work-head:hover .work-logo {
+    display: none;
+}
+
+.work-word {
+    height: 10vh;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 1.3rem;
+}

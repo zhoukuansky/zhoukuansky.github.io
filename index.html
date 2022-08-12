@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+    <meta property="og:title" content="周宽、zksky的个人网站主页">
+    <meta property="og:url" content="https://www.zksky.top/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="zksky的个人网站主页，一个看似小白、实则真·小白的IT界少年">
+    <meta property="og:image" content="https://www.zksky.top/images/me/me.jpg">
+    <meta property="og:locale" content="zh-CN">
+    <meta property="og:locale:alternate" content="en-US">
+    <meta property="og:site_name" content="周宽、zksky的个人网站主页">
+
+    <meta name="author" content="周宽（zksky、吟游少年）">
+    <meta name="keywords" content="个人主页，个人网站，个人博客,zksky,周宽">
+    <meta name="description" content="周宽的个人网站主页，一个看似小白、实则真·小白的IT界少年">
+    <meta name="generator" content="VS Code">
+    <!-- ios的Bar显示为灰色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="zksky">
+    <meta name="weibo:webpage:create_at" content="2020-04-07 15:00:00">
+    <meta name="weibo:webpage:update_at" content="2020-06-17 15:00:00">
+    <!-- 强制页面在当前窗口中以独立页面显示，防止自己的网页被别人当作一个frame页调用；  默认以chorme风格加载 -->
+    <meta http-equiv="windows-Target" contect="_top">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--自动将http的不安全请求升级为https -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>zksky的个人主页</title>
+
+    <link rel="shortcut icon" href="images/icon/favicon.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/work.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+</head>
+
+<body id="">
+    <header id="myInfo" class="myInfo">
+        <div class="info-button" id="info-button">
+            <a href="javascript:showInfo(0);">
+                <img id="info-button-img" src="images/icon/right.png" alt="icon" class="info-box-icon"
+                    style="transform: rotate(0deg);">
+            </a>
+        </div>
+        <div class="info-header">
+            <div class="pic-box">
+                <img src="images/me/me.jpg" alt="" class="mePic" />
+            </div>
+            <h4 align="center" class="myName">Zhou Kuan</h4>
+            <ul class="mySocial">
+                <li>
+                    <a href="tencent://message/?uin=553392040&amp;Site=http://vps.shuidazhe.com&amp;Menu=yes" id="QQ">
+                        <img src="images/icon/QQ.png" data-toggle="tooltip" data-placement="bottom" title=""
+                            data-original-title="QQ" alt="QQ">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://weibo.com/u/6030743704" target="_blank">
+                        <img src="images/icon/weibo.png" data-toggle="tooltip" data-placement="bottom" title=""
+                            data-original-title="微博" alt="微博">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/zhoukuansky" target="_blank">
+                        <img src="images/icon/github.png" data-toggle="tooltip" data-placement="bottom" title=""
+                            data-original-title="github" alt="github">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://gitee.com/zhoukuansky" target="_blank">
+                        <img src="images/icon/gitee.png" data-toggle="tooltip" data-placement="bottom" title=""
+                            data-original-title="gitee" alt="gitee">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/%E5%AE%BD-%E5%91%A8-9199191a5/?trk=chatin_wnc_redirect_pubprofile&ctx=cnpartner&profileId=ACoAACf9xEMB3cdNXo2dJXMCHUiFyw2tnSySrVg&trk=zephyr_profile_qr_wnc"
+                        target="_blank">
+                        <img src="images/icon/lingying.png" data-toggle="tooltip" data-placement="bottom" title=""
+                            data-original-title="领英" alt="领英">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="info-body">
+            <ul class="my-info-list">
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>昵称：</strong>zksky or zhoukuansky
+                    </span>
+                </li>
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>地址：</strong>中国 · 四川 · 自贡
+                    </span>
+                </li>
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>院校：</strong><a href="https://www.sicau.edu.cn">四川农业大学（本科）</a>
+                    </span>
+                </li>
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>院校：</strong><a href="https://www.hnu.edu.cn" target="_blank">湖南大学（硕士）</a>
+                    </span>
+                </li>
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>博客：</strong><a href="https://blog.zksky.top" target="_blank">https://blog.zksky.top/</a>
+                    </span>
+                </li>
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>CSDN：</strong><a href="https://blog.csdn.net/soul_sky" target="_blank">zksky's CSDN
+                        </a>
+                    </span>
+                </li>
+                <li>
+                    <div class="hover-background-filter"></div>
+                    <span class="info-list-content">
+                        <strong>邮箱：</strong><a class="email-red"
+                            href="mailto:zhoukuansky@163.com">zhoukuansky@163.com</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="myBlog">
+            <center><a href="https://blog.zksky.top" target="_blank">
+                    Blog
+                </a></center>
+        </div>
+    </header>
+
+    <section class="index">
+        <div class="index-box">
+            <div class="index-content">
+                <div class="index-h1">
+                    <h1>Je pense donc je suis</h1>
+                </div>
+                <div class="code">
+                    <span><strong class="typedjs"></strong></span>
+                </div>
+                <div class="chnia" id="showMyLifeTime">
+                    <span>愿你走出半生</span><br>
+                    <span>归来仍是少年</span><br>
+                    <span>{{time}}</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="map">
+        <div class="visitor">
+            <div class="visitor-head" id="location">
+                <h1>来访者星图</h1>
+                <div class="visitor-word">
+                    <div>时空：{{address}} 的来访客</div>
+                    <div>序列：命运第 {{order}} 次遇见</div>
+                    <div class="note">(基准：600秒内不重复计算)</div>
+                    <div class="col-md-auto  col-sm-auto col-auto">
+                            <div class="other2">白色：足迹</div>
+                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="visitor-body">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-md-auto  col-sm-auto col-auto">
+                            <div class="globe-container">
+                                <canvas id="globe"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="work">
+        <h1>我的作品</h1>
+        <div class="work_info">以下为2019-2020部分作品</div>
+        <div class="container-fluid my-setting">
+            <div class="row justify-content-center">
+                <div class="col-md-4 col-sm-5  mywork">
+                    <div class="mywork-box">
+                        <div class="work-head">
+                            <img class="work-logo" src="images/workIcon/IOT.png" alt="">
+                            <a href="https://zk.zksky.top/IOTData/swagger-ui.html#" target="_black"
+                                class="work-link">index</a>
+                            <a href="https://gitee.com/zhoukuansky/IOTData" target="_black" class="work-link">gitee</a>
+                            <a href="https://github.com/zhoukuansky/IOTData" target="_black" class="work-link"
+                                target="_black">github</a>
+                        </div>
+                        <div class="work-word">
+                            IOT数据存储平台
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-5 mywork">
+                    <div class="mywork-box">
+                        <div class="work-head">
+                            <img class="work-logo" src="images/workIcon/river.png" alt="">
+                            <a href="https://my.zksky.top/riverLengthSystem/pages/index.html" target="_black" class="work-link">index</a>
+                            <a href="https://gitee.com/zhoukuansky/River_length_system" target="_black"
+                                class="work-link">gitee</a>
+                            <a href="https://github.com/zhoukuansky/River_length_system" target="_black"
+                                class="work-link">github</a>
+                        </div>
+                        <div class="work-word">
+                            成都河长制平台
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-5 mywork">
+                    <div class="mywork-box">
+                        <div class="work-head">
+                            <img class="work-logo" src="images/workIcon/blog.png" alt="">
+                            <a href="https://blog.zksky.top/" target="_black" class="work-link">index</a>
+                            <a href="https://gitee.com/zhoukuansky/zkBlogCode" target="_black"
+                                class="work-link">gitee</a>
+                            <a href="https://github.com/zhoukuansky/zkBlogCode" target="_black"
+                                class="work-link">github</a>
+                        </div>
+                        <div class="work-word">
+                            我的博客平台
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-5 mywork">
+                    <div class="mywork-box">
+                        <div class="work-head">
+                            <img class="work-logo" src="images/workIcon/recycle.png" alt="">
+                            <a href="https://zk.zksky.top/recycle/swagger-ui.html#" target="_black"
+                                class="work-link">index</a>
+                            <a href="https://gitee.com/zhoukuansky/recycle" target="_black" class="work-link">gitee</a>
+                            <a href="https://github.com/zhoukuansky/recycle" target="_black"
+                                class="work-link">github</a>
+                        </div>
+                        <div class="work-word">
+                            线上回收站平台
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-5 mywork">
+                    <div class="mywork-box">
+                        <div class="work-head">
+                            <img class="work-logo" src="images/workIcon/plant.png" alt="">
+                            <a href="https://zk.zksky.top/hydroponics/" target="_black" class="work-link">index</a>
+                            <a href="https://gitee.com/zhoukuansky/plantPro" target="_black" class="work-link">gitee</a>
+                            <a href="https://github.com/zhoukuansky/plantPro" target="_black"
+                                class="work-link">github</a>
+                        </div>
+                        <div class="work-word">
+                            植物工厂Web
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project"></section>
+
+    <section class="skill">
+        <div class="skill-bg">
+            <div class="container-fluid my-setting">
+                <div class="row justify-content-center">
+                    <div class="col-md-3 xiaoshi">
+                        <div class="rounded my-word">
+                            <div class="row justify-content-center">
+                                <div class="col-md-auto">
+                                    <p>愿</p>
+                                    <p>此生像一只蜡烛，</p>
+                                    <p>从头燃到尾，</p>
+                                    <p>始终光明。</p>
+                                    <p>——寄语</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="skill-title-word">
+                            What can I do？
+                        </h1>
+                        <ul class="skill-list">
+                            <li>
+                                <div class="skill-title">
+                                    <strong>网页设计</strong>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+                                        role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 55%">
+                                        55%
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-title">
+                                    <strong>java及数据库</strong>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                        role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 70%">
+                                        70%
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-title">
+                                    <strong>程序设计</strong>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+                                        role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 60%">
+                                        60%
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-title">
+                                    <strong>python</strong>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                        role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 35%">
+                                        35%
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-title">
+                                    <strong>摄影</strong>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+                                        role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 40%">
+                                        40%
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container-fluid my-setting">
+            <div class="row justify-content-center">
+                <div class="col-md-4 contact-head">
+                    <h1>Contact Me</h1>
+                    <a href="javascript:showInfo(1);" class="send-email">Send Email to me</a>
+                </div>
+                <div class="col-md-6">
+                    <p class="contact-title">
+                        联系作者<img src="images/icon/logo.png" width="40px" alt="">
+                    </p>
+                    <div class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">称呼：</label>
+                            <input name="name" minlength="1" type="text" class="form-control" placeholder="Your Name"
+                                v-model="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">邮箱：</label>
+                            <input type="email" name="email" class="form-control" placeholder="Your Email"
+                                v-model="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">主题：</label>
+                            <input type="text" name="subject" class="form-control" placeholder="Subject"
+                                v-model="subject">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">内容：</label>
+                            <textarea class="form-control" name="content" placeholder="Your Message"
+                                v-model="content"></textarea>
+                        </div>
+
+                        <div class="form-send">
+                            <button class="btn btn-large" v-on:click="send()">发送信息</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="bg-footer">
+            <div class="footer-content">
+                <img src="images/icon/zk.png" alt="" width="50px"></br>
+                <a href="http://beian.miit.gov.cn/publish/query/indexFirst.action">蜀ICP备20010319号</a></br>
+                <span id="showAdultsTime">风雨中走过 {{time}}</span></br>
+                <span>Copyright © 2020-2030 ZkSky. | All Rights Reserved.</span></br>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="assets/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vue/vue.min.js"></script>
+    <script src="assets/typed-js/typed.min.js"></script>
+    <script type='text/javascript' src='assets/palnetary/d3.v3.min.js'></script>
+    <script type='text/javascript' src='assets/palnetary/topojson.v1.min.js'></script>
+    <script type='text/javascript' src='assets/palnetary/planetaryjs.min.js'></script>
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=SPykGZYHBM5agfqBYSZKqEvKGK7qdC7Q"></script>
+    <script src="assets/mylibrary/cookie.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/globe.js"></script>
+    <script src="js/local.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

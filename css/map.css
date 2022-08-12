@@ -1,0 +1,61 @@
+.map {
+
+}
+
+.visitor {
+    width: 100%;
+    height: auto;
+    min-height: 650px;
+    background: rgb(13, 78, 131);
+    background: url(../images/bg/sky0.jpg);
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-attachment: fixed;
+    padding-top: 70px;
+}
+
+.visitor-head {
+    padding: 0 10px;
+}
+
+.visitor-body {
+
+}
+
+.visitor h1 {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.visitor-word {
+    color: white;
+    text-align: center;
+    margin: 50px auto 0 10px;
+    font-size: 1.25rem;
+    font-weight: 200;
+}
+
+.note {
+    font-size: 0.7rem;
+}
+
+.globe-container {
+    margin: 0px auto;
+    padding: 0px;
+    filter: blur(0px);
+    color: #df5f5f;
+    touch-action: none;
+}
+.other1{
+    margin-top: 10px;
+    color: white;
+    font-size: 0.9rem;
+}
+.other2{
+    color:white;
+    font-size: 0.9rem;
+}

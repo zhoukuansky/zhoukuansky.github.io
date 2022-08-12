@@ -1,0 +1,103 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: whitesmoke;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+    Helvetica, Arial,
+    sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+}
+
+::selection {
+    color: rgba(255, 255, 255, 0.99);
+    /* background-color:#ffe300; */
+    /* background-color:rgba(17, 159, 253, 0.973); */
+    background-color: rgb(214, 47, 24);
+}
+
+.index {
+    height: 100%;
+    min-height: 500px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.index-box {
+    height: 100%;
+    width: 100% !important;
+    background: url(../images/bg/index.jpg) no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+
+    animation: coverZoom linear 20s infinite;
+    -webkit-animation: coverZoom linear 20s infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes coverZoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.index-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.index-h1 {
+    padding-top: 30vh;
+}
+
+.index-h1 h1 {
+    font-size: 3.5rem;
+    font-weight: 1000;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.code {
+    text-align: center;
+    -webkit-text-stroke: 1.2px black;
+    color: white;
+    font-size: 2.3rem;
+}
+
+.go-mybolg {
+    text-align: center;
+    -webkit-text-stroke: 0px black;
+    color: gainsboro;
+    font-size: 1.5rem;
+}
+
+.chnia {
+    text-align: center;
+    /* -webkit-text-stroke:0.5px black; */
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -92px;
+}
+
+/* .navbar-b .navbar-brand {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.nav-link{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+} */

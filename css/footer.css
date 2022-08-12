@@ -1,0 +1,44 @@
+.footer {
+    background: url(../images/bg/sky.jpg);
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    height: 380px;
+    position: relative;
+    overflow: hidden;
+    background-color: #1F1F1F;
+}
+
+.footer:before {
+    content: "";
+    position: absolute;
+    left: -227px;
+    top: -200px;
+    background: #2f2f2f;
+    width: 2200px;
+    height: 350px;
+    transform: rotate(7deg);
+    border-bottom: 1.5px solid white;
+}
+
+.bg-filter {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.footer-content {
+    width: 100%;
+    position: absolute;
+    bottom: 80px;
+    color: white;
+    text-align: center;
+}
+
+.footer-content a {
+    color: whitesmoke;
+}
+
+.footer-content a:hover {
+    text-decoration: none;
+}

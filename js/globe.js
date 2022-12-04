@@ -28,7 +28,7 @@ function initGlobe() {
     //ttl是显示的时间长短，
     //angle是ping的最大角度（它将在其TTL范围内增长到此大小）；默认为5
     globe.loadPlugin(planetaryjs.plugins.pings({
-        color: "yellow", ttl: 2000, angle: 3
+        color: "red", ttl: 2000, angle: 3
     }))
     //加载点
     addPingsThing();
